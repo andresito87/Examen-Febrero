@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dando estilos con Javascript</title>
+</head>
+
+<body>
+  <style>
+    /* Clase para texto rojo */
+    .texto-rojo {
+      color: red;
+    }
+
+    /* Clase para texto azul */
+    .texto-azul {
+      color: blue;
+    }
+  </style>
+
+  <p id="parrafo1"> </p>
+  <p id="parrafo2"> </p>
+
+  <p id="parrafo3">Este es el parrafo 3</p>
+
+
+  <script>
+    let salida1 = '<p class="texto-rojo">Este es un texto rojo.</p>'
+    let salida2 = '<p class="texto-azul">Este es un texto azul.</p>'
+
+    document.getElementById("parrafo1").outerHTML = salida1;
+    document.getElementById("parrafo2").outerHTML = salida2;
+    document.getElementById("parrafo3").classList.add("texto-azul");
+
+  </script>
+</body>
+
+</html>

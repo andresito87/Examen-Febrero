@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Grid (filas y columnas)</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #contenedor_1 {
+            margin: 50px auto;
+            width: 700px;
+            height: 800px;
+
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        #contenedor_1 {
+            border: blue 1px solid;
+            display: grid;
+            /* Definimos las columnas y filas*/
+            grid-template-columns: 50% 250px 1fr;
+            grid-template-rows: 150px 250px 250px 1fr;
+            /* Definimos la separación*/
+            grid-gap: 5px;
+        }
+
+        /* Definimos cada elemento con las propiedades grid-row, grid-colum, grid-row-star, grid-row-end, grid-column-star y grid-column-end*/
+        /* Se han utilizado diferentes nomenclaturas, se puede utilizar tanto una forma como otra para definir las zonas*/
+        .zona1 {
+            grid-row: 1;
+            /* Otra forma de definirlo*/
+            /*grid-row-start: 1;
+            grid-row-end: 2;*/
+
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+        }
+
+        .zona2 {
+            grid-row: 1 / 4;
+            grid-column: 3;
+        }
+
+        .zona3 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column: 1;
+        }
+
+        .zona4_1 {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        .zona4_2 {
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        .zona5 {
+            grid-row: 4;
+            grid-column: 1/4;
+
+        }
+
+        #contenedor_1 div {
+
+            border: black 1px solid;
+        }
+
+        #contenedor_1 :nth-child(odd) {
+            background-color: bisque;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1> Ejemplos de maquetación con Grid con filas y columnas</h1>
+
+<div id="contenedor_1">
+    <div class="zona1">zona 1</div>
+    <div class="zona2">zona 2</div>
+    <div class="zona3">zona 3</div>
+    <div class="zona4_1">zona 4-1</div>
+    <div class="zona4_2">zona 4-2</div>
+    <div class="zona5">zona 5</div>
+
+</div>
+
+</body>
+</html>

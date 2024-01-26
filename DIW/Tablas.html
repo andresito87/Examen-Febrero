@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejemplo de tabla con estilos</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="Tablas">
+    <meta name="description" content="Ejemplo de página con etiqutas HTML5">
+    <style>
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            width: 50%;
+            height: 50%;
+            margin: 1% auto;
+        }
+
+        table {
+            width: 50%; /*Defiimos el ancho y el alto de la tabla dentro del objeto contenedor */
+            height: 50%;
+            border-collapse: collapse; /* Indicamos que no habrá separación entre las celdas */
+            caption-side: top; /* Situalmos el título en la parte superior */
+            empty-cells: hide; /* Oculta los bordes y los fondos de las celas vacías*/
+            margin: 50px auto; /*Centramos horizontalmente la tabla dentro del contenedor*/
+            border-spacing: 2em 2em; /* Separación de los bordes en nuestro caso no tiene efecto ya que la propiedad border-collapse tiene el valor collapse.*/
+        }
+
+        caption { /* Aplicamos estilos al título*/
+            font-weight: bolder;
+            color: #877e94;
+            margin-bottom: 10px;
+        }
+
+        thead { /* Aplicamos estilos a las cabeceras*/
+            background-color: wheat;
+        }
+
+        /* Definimos el ancho de la primera columna */
+        col:nth-of-type(1) {
+            width: 100px;
+        }
+
+        /* Centramos los valores dentro de las celdas */
+        td {
+            text-align: center;
+        }
+
+        /* Aplicamos estilos a la primmera celda de cada fila  */
+        tr td:nth-of-type(1) {
+            text-align: left;
+            font-weight: 800;
+            color: blue;
+            background-color: thistle;
+        }
+
+        /* Aplicamos estilos al pie de la tabla */
+        tfoot {
+            background-color: rgba(155, 232, 84, 0.3);
+        }
+
+        /* Aplicamos estilos a la clase activos  podríamos hacerlo también por la posición de la columna*/
+        .activos {
+            background-color: rgba(182, 195, 224, 0.4);
+        }
+
+        /* Aplicamos estilos a la clase inactivos*/
+        .inactivos {
+            background-color: rgba(245, 139, 110, 0.3);
+        }
+
+        /* Definimos un borde inferior para cda fila */
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        /* Definimos un borde para cada celda */
+        td {
+            border: 1px solid black;
+        }
+
+
+        /* Definimos fondo blanco para la última zona del pie que no está rellena */
+        tfoot tr :nth-last-child(1) {
+            background-color: white;
+        }
+
+
+        /* Definimos estilos para el pseudolemento :hover de cada celda. CAmbialmos el color el tamaño de la fuente y el cursor del ratón */
+        td:hover {
+            color: red;
+            font-size: 1.2rem;
+            cursor: grab;
+        }
+    </style>
+
+</head>
+
+<body>
+<h1>Ejemplo de tabla</h1>
+<div>
+    <table>
+
+        <caption>Matriculaciones en 2º de DAW.</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col class="inactivos">
+            <col class="activos" span="2">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>Módulo</th>
+            <th>Matriculados</th>
+            <th>Inactivos</th>
+            <th>Suspensos</th>
+            <th>Aprobados</th>
+        </tr>
+        </thead>
+
+        <tfoot>
+        <tr>
+            <td>Total calificaciones</td>
+            <td>390</td>
+            <td colspan="3"></td>
+        </tr>
+        </tfoot>
+
+        <tbody>
+        <tr>
+            <td>DAW</td>
+            <td>80</td>
+            <td>20</td>
+            <td>8</td>
+            <td>52</td>
+        </tr>
+        <tr>
+            <td>DIW</td>
+            <td>100</td>
+            <td>30</td>
+            <td>10</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>DWEC</td>
+            <td>110</td>
+            <td>20</td>
+            <td>10</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>DWES</td>
+            <td>100</td>
+            <td>30</td>
+            <td>10</td>
+            <td>60</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>

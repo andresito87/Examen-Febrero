@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplos accesibilidad</title>
+  <link rel="stylesheet" href="./estilos/estilos_accesibilidad.css" media="screen">
+
+
+  </style>
+</head>
+
+<body>
+  <div class="contenedor_principal">
+    <header>
+      <h1> ACCESIBILIDAD / USABILIDAD</h1>
+    </header>
+
+    <nav>
+      <h2>Acceso a ejemplos</h2>
+      <div>
+        <a href="#general" title="Acceso a cuestioines generales">General</a>
+        <a href="#general" title="Etiquetas semánticas">Etiquetas semánticas</a>
+        <a href="#general" title="Acceso a section / article">Acceso a section / article</a>
+        <a href="#general" title="Acceso a formulario">Acceso a formulario</a>
+        <a href="#general" title="Acceso a Tabla">Acceso a Tabla</a>
+      </div>
+    </nav>
+    <div class="etiquetas_semanticas">
+      <h3> Etiquetas y atributos semánticos</h3>
+      <p> Etiquetas semánticas en HTML</p>
+      <p> Atributos que facilitan la accesibilidad</p>
+      <ul>
+        <li>
+          Etiquetas: figuere - figcaption
+        </li>
+        <li>
+
+          Etiquetas: tbody, tfoot, thead, col, colgroup
+        </li>
+
+        <li>
+          Etiquetas: figuere - figcaption
+        </li>
+
+        <li>
+          Etiquetas: cite, blockquote, q
+        </li>
+
+        <li>
+          Atributos: alt, tabindex, title
+        </li>
+        <li>
+          Atributos: header, id
+        </li>
+
+
+        <li>
+          Etc.
+        </li>
+
+      </UL>
+
+    </div>
+    <main tabindex="0">
+      <h2>Ejemplos</h2>
+      <div>
+        <h3>Estructura con títulos</h3>
+        <div class="Etiqueta article">
+          <h3>General</h3>
+          <article class="noticia">
+            <header>
+              <h4>Titulo noticia</h4>
+            </header>
+            <div>
+              <p>
+                Cuerpo de la noticia
+              </p>
+            </div>
+            <footer>
+              <p>Pie de la noticia</p>
+            </footer>
+          </article>
+        </div>
+      </div>
+
+      <div class="formulario">
+        <h3>Ejemplo Formulario</h3>
+
+        <form action="" autocomplete="on" validate>
+          <!-- Podemos indicar que el formulario no se valide con novalidate-->
+          <!-- El atributo autocomplete, puede hacerse a nivel de campo. -->
+          <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre: (Obligatorio)</label>
+            <input id="nombre" name="nombre" minlength="3" maxlength="20" placeholder="Nombre"
+              title="Introduzca su nombre máximo 20 caracteres" tabindex="1" required>
+            <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <label for="apellidos">Apellidos: (Obligatorio)</label>
+            <input id="apellidos" name="apellidos" minlength=3 maxlength=30 placeholder="Apellidos"
+              title="Introduzca sus apellidos máximo 20 caracteres" tabindex="1" required>
+            <!-- mensaje que se muestra para los campos obligatorios, cuando es invalido se muestra y cuando es válido se oculta -->
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <label for="correo">Correo Electrónico: (Obligatorio)</label>
+            <input class="tipo_2" type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"
+              title="Introduzca su correo electrónico" tabindex="3" required>
+            <span class="mensaje"> Inválido</span>
+            <br>
+            <br>
+
+            <!-- campo de tipo radio, ver como se enlaza cada opción con su label con los atributos for e id -->
+            <label>Sexo:</label>
+            <label for="hombre">Hombre</label> <input type="radio" value"h" name="sexo" id="hombre">
+            <label for="mujer">Mujer </label><input type="radio" value"m" name="sexo" id="mujer">
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Gustos</legend>
+            <label for="numero">Número preferido:</label>
+            <!-- campo número controlado por un patrón, atributo pattern  -->
+
+            <input class="numero" id="numero" name="numero" title="Introduzca un número entre 0 y 9" tabindex="4"
+              pattern="[0-9]{0,1}">
+            <br>
+            <br>
+
+            <label for="comida">Comida preferida:</label>
+            <input class="tipo_2" id="comida" name="comida" minlength=3 maxlength=50 placeholder="Comida preferida"
+              title="Introduzca su comida preferida máximo 50 caracteres" tabindex="6">
+            <br>
+            <br>
+
+            <label for="select-heroes">Elija un personaje de ficción:</label>
+            <select id="select-heroes" acceskey="h" tabindex="6">
+              <optgroup label="Super Heroes">
+                <option value="1">Iron Man</option>
+                <option value="2">Thor</option>
+                <option value="3">Superman</option>
+              </optgroup>
+              <optgroup label="Super Villanos">
+                <option value="4">Tanos</option>
+                <option value="5">Loki</option>
+                <option value="6">Joker</option>
+              </optgroup>
+            </select>
+          </fieldset>
+
+          <div class="botones">
+            <button class="boton enviar" type="submit">Enviar</button>
+            <button class="boton inicializar" type="reset">Inicializar</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h3>Tabla semántica</h3>
+      </div>
+      <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Tables/Advanced"
+        title="Tablas complejas accesibles"></a>
+      <pre>Información extraida de: https://developer.mozilla.org/es/docs/Learn/HTML/Tables/Advanced</pre></a>
+
+      <!-- Ejemplo de tabla solo con etiquetas semántica thead, tfoot y tbody -->
+      <div class="tabla tabla1">
+        <table>
+          <caption>How I chose to spend my money</caption>
+          <thead>
+            <tr>
+              <th>Purchase</th>
+              <th>Location</th>
+              <th>Date</th>
+              <th>Evaluation</th>
+              <th>Cost (€)</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <td colspan="4">SUM</td>
+              <td>118</td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>Haircut</td>
+              <td>Hairdresser</td>
+              <td>12/09</td>
+              <td>Great idea</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Lasagna</td>
+              <td>Restaurant</td>
+              <td>12/09</td>
+              <td>Regrets</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>Shoes</td>
+              <td>Shoeshop</td>
+              <td>13/09</td>
+              <td>Big regrets</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td>Toothpaste</td>
+              <td>Supermarket</td>
+              <td>13/09</td>
+              <td>Good</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Ejemplo de tabla solo con etiquetas semántica thead, tfoot y tbody y header e id -->
+      <div class="tabla tabla1">
+        <table>
+          <caption>Items Sold August 2016</caption>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <th colspan="3" id="clothes">Clothes</th>
+              <th colspan="2" id="accessories">Accessories</th>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <th id="trousers">Trousers</th>
+              <th id="skirts">Skirts</th>
+              <th id="dresses">Dresses</th>
+              <th id="bracelets">Bracelets</th>
+              <th id="rings">Rings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="3" id="belgium">Belgium</th>
+              <th id="antwerp">Antwerp</th>
+              <td headers="clothes trousers belgium antwerp">56</td>
+              <td headers="clothes skirts belgium antwerp">22</td>
+              <td headers="clothes dresses belgium antwerp">43</td>
+              <td headers="accessories bracelets belgium antwerp">72</td>
+              <td headers="accessories rings belgium antwerp">23</td>
+            </tr>
+            <tr>
+              <th id="gent">Gent</th>
+              <td headers="clothes trousers belgium gent">46</td>
+              <td headers="clothes skirts belgium gent">18</td>
+              <td headers="clothes dresses belgium gent">50</td>
+              <td headers="accessories bracelets belgium gent">61</td>
+              <td headers="accessories rings belgium gent">15</td>
+            </tr>
+            <tr>
+              <th id="brussels">Brussels</th>
+              <td headers="clothes trousers belgium brussels">51</td>
+              <td headers="clothes skirts belgium brussels">27</td>
+              <td headers="clothes dresses belgium brussels">38</td>
+              <td headers="accessories bracelets belgium brussels">69</td>
+              <td headers="accessories rings belgium brussels">28</td>
+            </tr>
+            <tr>
+              <th rowspan="2" id="netherlands">The Netherlands</th>
+              <th id="amsterdam">Amsterdam</th>
+              <td headers="clothes trousers netherlands amsterdam">89</td>
+              <td headers="clothes skirts netherlands amsterdam">34</td>
+              <td headers="clothes dresses netherlands amsterdam">69</td>
+              <td headers="accessories bracelets netherlands amsterdam">85</td>
+              <td headers="accessories rings netherlands amsterdam">38</td>
+            </tr>
+            <tr>
+              <th id="utrecht">Utrecht</th>
+              <td headers="clothes trousers netherlands utrecht">80</td>
+              <td headers="clothes skirts netherlands utrecht">12</td>
+              <td headers="clothes dresses netherlands utrecht">43</td>
+              <td headers="accessories bracelets netherlands utrecht">36</td>
+              <td headers="accessories rings netherlands utrecht">19</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <!-- Ejemplo de tabla solo con etiquetas semántica thead, tfoot y tbody y scope -->
+
+        <div class="tabla tabla2    ">
+          <table>
+            <caption>Items Sold August 2016</caption>
+            <thead>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th colspan="3" scope="colgroup">Clothes</th>
+                <th colspan="2" scope="colgroup">Accessories</th>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <th scope="col">Trousers</th>
+                <th scope="col">Skirts</th>
+                <th scope="col">Dresses</th>
+                <th scope="col">Bracelets</th>
+                <th scope="col">Rings</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3" scope="rowgroup">Belgium</th>
+                <th scope="row">Antwerp</th>
+                <td>56</td>
+                <td>22</td>
+                <td>43</td>
+                <td>72</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <th scope="row">Gent</th>
+                <td>46</td>
+                <td>18</td>
+                <td>50</td>
+                <td>61</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <th scope="row">Brussels</th>
+                <td>51</td>
+                <td>27</td>
+                <td>38</td>
+                <td>69</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <th rowspan="2" scope="rowgroup">The Netherlands</th>
+                <th scope="row">Amsterdam</th>
+                <td>89</td>
+                <td>34</td>
+                <td>69</td>
+                <td>85</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <th scope="row">Utrecht</th>
+                <td>80</td>
+                <td>12</td>
+                <td>43</td>
+                <td>36</td>
+                <td>19</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>Ejemplos de accesibilidad</h3>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

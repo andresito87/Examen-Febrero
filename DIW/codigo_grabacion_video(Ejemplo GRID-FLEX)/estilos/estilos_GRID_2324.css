@@ -1,0 +1,325 @@
+
+* { box-sizing: border-box;}
+
+/* reset */
+
+/* Carga de fuente externa */
+@font-face {
+  font-family: "fuente_local";
+  src: url(../fuentes/Caveat-Bold.ttf);
+}
+
+/* Declaración de variables */
+:root {
+  --encabezado: rgba(17, 0, 255, 0.5);
+  --bordes: red;
+  font-size:14px;
+}
+
+/* Bordes */
+
+header,nav,main,footer{
+    border:solid 2px black;
+}
+
+h1,h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Definión de grid para la maqueta principal */
+
+body{
+    /* Definimos el contenedor principal como un grid */ 
+    display: grid;
+    /* Definimos la separación entre cada una de las zonas */
+    grid-gap: 5px;
+    /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+    grid-template-columns: 100%;
+    grid-template-rows: auto 70px auto auto;
+    
+    /* Se puede dejar en auto o eliminar la fila y se cogerá el alto que se necesite */
+    /*grid-template-rows: repeat(4, auto);*/
+    
+    /* Definimos mediante areas nuestra maqueta*/
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+   }
+   
+   header{grid-area:header;}
+   nav{grid-area:nav;}
+   main{grid-area:main;}
+   footer{grid-area:footer;}
+
+/* Asignamos cada una de las areas definidas en el grid a un elemento del HTML */   
+header{
+    /* Definimos el header */ 
+    display: grid;
+    /* Definimos la separación entre cada una de las zonas */
+    grid-gap: 5px;
+    /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+    grid-template-columns: 33% 33% 1fr;
+    grid-template-rows: auto ;
+    /* Definimos mediante areas nuestra maqueta*/
+    grid-template-areas:
+        "header1 header2 header3";
+    padding:30px;
+}
+
+/* Definimos los estilos de la cabecera */
+header div{
+    border:solid 1px black;
+}
+/* Estilos para la primera zona */
+header .subzona_encabezado:nth-child(1){
+    grid-area:header1;
+}
+/* Estilos para la segunda zona */
+
+header .subzona_encabezado:nth-child(2){
+    grid-area:header2;
+    background-color: var(--encabezado);
+    color:white;
+    font-family:fuente_local, serif;
+  }
+  
+  header .subzona_encabezado:nth-child(3){
+    grid-area:header3;
+    color:olivedrab;
+  }
+
+/* Zona de navegación */
+nav{
+    background: linear-gradient(90deg, blue 10%, white 90%);
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+}
+/* Definimos botones de zona de navegación */
+nav button{
+    margin:10px;
+}
+
+main{
+    color:var(--bordes);
+}
+
+/* Zona de contenido */
+/* Definimos un grid para esta zona */
+main{
+    display: grid;
+    /* Definimos la separación entre cada una de las zonas */
+    grid-gap: 5px;
+    /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto;
+    
+    /* Se puede dejar en auto o eliminar la fila y se cogerá el alto que se necesite */
+    /*grid-template-rows: repeat(3, auto);*/
+    
+    /* Definimos mediante areas nuestra maqueta*/
+    grid-template-areas:    
+        "main_titulo main_titulo"
+        "main_img main_tarjeta"
+        "main_texto main_tarjeta";
+   }
+
+   main div{
+    outline: 2px var(--bordes) solid;
+   }
+   .main_titulo,.main_img,.main_tarjeta,.main_texto{
+    border:solid 2px black;
+   }
+
+   /* Estilos para cada elemento del main */
+   /* Zona de la imagen principal*/
+   .main_titulo{
+        grid-area:main_titulo;
+        padding:10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_img{
+        grid-area:main_img;
+        padding:10px;
+        display:flex;
+        justify-content: center;
+    }
+
+    .img_principal{
+        width:20rem;
+        height:auto;
+    } 
+
+    .main_texto{
+        grid-area:main_texto;
+
+    }
+    
+    .main_texto h2{
+        text-align: center;
+        color:purple;
+    }
+
+    .main_texto p{
+        column-count:3;
+        column-gap:50px;
+        column-rule: blue 10px double;
+        column-fill:balance;
+
+    }
+
+    .main_tarjeta{
+        grid-area:main_tarjeta;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+
+    /* Tarjeta individual*/
+        .tarjeta{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius:30px;
+            margin:10px;
+            box-shadow: -10px 10px 10px black, -15px 15px 5px aqua;
+        }
+
+        .tarjeta img{
+            outline:2px solid green;
+            border-radius: 60%;
+            width: 7rem;
+            height: 7rem;
+        }
+        /* Ponemos un filtro al hover de la imagen de la primera tarjeta*/
+        #tarjeta_img:hover{
+            filter:invert(100%);
+        }
+
+        /* Ponemos un fondo a la tarjeta cuando hagamos hover*/     
+        .tarjeta:hover{
+            background-color: #849561;
+        }
+
+        #precio{
+            opacity: 0;
+            position:relative;
+            left: -10px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px var(--bordes);
+        }
+
+        figure:hover+#precio{
+            opacity:1;
+        }
+
+        .tarjeta figcaption{
+            font-size:2rem;
+            color:rgb(15, 126, 104);
+        }
+
+        .tarjeta p{
+            text-align: left;
+            color:var(--bordes);
+        }
+
+        figure:hover~p{
+            color:blue;
+            text-transform: uppercase;
+            text-align: justify;
+            margin: 0px 10px 0px;
+        }
+
+        footer{
+            /* Definimos el header */ 
+            display: grid;
+            /* Definimos la separación entre cada una de las zonas */
+            grid-gap: 5px;
+            /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+            grid-template-columns: 33% 33% 1fr;
+            grid-template-rows: auto;
+            /* Definimos mediante areas nuestra maqueta*/
+            grid-template-areas:
+            "footer1 footer2 footer3"
+        }
+    
+        footer div{
+            border:solid 2px black;
+        }
+        footer h3{
+            color:black;
+        }
+
+        footer .subzona_pie:nth-child(1)
+        {
+            grid-area:footer1;
+        }
+    
+        footer .subzona_pie:nth-child(2)
+        {
+            grid-area:footer2;
+            /* No defino flex*/
+            text-align: center;
+        }
+    
+        footer .subzona_pie:nth-child(3){
+            grid-area:footer3;
+        }
+
+        @media screen and (max-width: 650px) {
+        
+            main{
+                display: grid;
+                /* Definimos la separación entre cada una de las zonas */
+                grid-gap: 5px;
+                /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto;
+                
+                /* Se puede dejar en auto o eliminar la fila y se cogerá el alto que se necesite */
+                /*grid-template-rows: repeat(3, auto);*/
+                
+                /* Definimos mediante areas nuestra maqueta*/
+                grid-template-areas:    
+                    "main_titulo"
+                    "main_tarjeta";
+               }
+
+               .main_texto{
+                    display:none;
+                }    
+
+                .main_titulo{
+                    color:black;
+                }
+               .main_img{
+                    display:none;
+                }
+
+                footer{
+                    display:flex;
+                    flex-direction: column;
+                }
+
+                footer div:nth-child(odd){
+                    display:none;
+                }
+               
+        
+        }
+       
+    
+    
+
+

@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Declaración de variables */
+:root {
+  --color_claro: rgba(154, 207, 125, 0.8);
+  --rosa: rgb(234, 168, 229);
+  --negro: #000000;
+  --gris: #c2c2c2;
+}
+
+/* Definimos bordes y colores para zonas y títulos*/
+header,
+nav,
+main,
+footer {
+  border: solid 2px black;
+}
+h1 {
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  color: blue;
+}
+
+h3 {
+  text-align: center;
+  color: red;
+}
+
+h4 {
+  text-align: center;
+  color: green;
+}
+
+.contenedor_principal {
+  /* Definimos el contenedor principal como un grid */
+  display: grid;
+  /* Definimos la separación entre cada una de las zonas */
+  grid-gap: 5px;
+  /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: auto auto auto auto auto;
+
+  /* Se puede dejar en auto o eliminar la fila y se cogerá el alto que se necesite */
+  /*grid-template-rows: repeat(4, auto);*/
+
+  /* Definimos mediante areas nuestra maqueta*/
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "etiquetas_semanticas main"
+    "etiquetas_semanticas main"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+.etiquetas_semanticas {
+  grid-area: etiquetas_semanticas;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
+
+header {
+  /* Definimos el header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 2px solid black;
+}
+
+nav {
+  border: 2px solid black;
+  background-color: var(--rosa);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid black;
+}
+
+nav div * {
+  margin: 10px;
+}
+
+.etiquetas_semanticas {
+  border: 2px solid black;
+  background-color: var(--color_claro);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main div {
+  outline: 2px red solid;
+  margin: 10px;
+}
+
+.noticia {
+  background-color: var(--gris);
+}
+
+input:invalid {
+  border: solid 2px red;
+}
+
+/* Cuando el campo es válido se pone un borde verde */
+input:valid {
+  border: solid 2px green;
+}
+
+/* Al lado de cada campo obligatorio se ha puesto una etiqueta span de clase mensaje que se oculta cuando el campo es válido */
+input:valid + .mensaje {
+  visibility: hidden;
+}
+
+input {
+  width: 40%;
+}
+
+#hombre,
+#mujer {
+  width: 5%;
+}
+
+fieldset {
+  width: 60%;
+}
+
+#numero {
+  width: 5rem;
+}
+
+.botones {
+  width: 60%;
+  text-align: center;
+}
+.boton {
+  color: black;
+  border: 2px solid #0009ba;
+  margin: 10px;
+  text-align: center;
+}
+
+.enviar {
+  background-color: #52be80;
+}
+.inicializar {
+  background-color: #e74c3c;
+}
+
+.boton:hover {
+  color: white;
+  font-weight: 800;
+  border: 2px solid #0009ba;
+}
+
+main:focus {
+  background-color: gray;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 0.2rem;
+}
+
+th {
+  background-color: olivedrab;
+}
+
+tr:nth-child(odd) {
+  background-color: aquamarine;
+}

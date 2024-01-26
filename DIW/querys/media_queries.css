@@ -1,0 +1,27 @@
+@media screen and (max-width: 640px) {
+  /* Cuando la resolución de la pantalla es inferior a 640 px la barra lateral se mostrará al 100% de la pantalla al igual que el main y cambiará el fondo */
+  aside {
+    background-color: rgb(210, 180, 222);
+    float: left;
+    width: 100%;
+  }
+  main {
+    background-color: red;
+    float: left;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 640px) {
+  /* Cuando nuestra resolución es menor de 1024px y mayor de 640px cambiamos los porcentajes de los elementos aside y main y jugamos con los colroes */
+  aside {
+    background-color: rgb(235, 152, 78);
+    float: left;
+    width: 20%;
+  }
+  main {
+    background-color: rgb(253, 235, 208);
+    float: left;
+    width: 80%;
+  }
+}

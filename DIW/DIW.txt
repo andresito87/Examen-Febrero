@@ -1,0 +1,43 @@
+Curso HTML(Google)
+https://web.dev/learn/html/welcome?hl=es-419
+
+Curso CSS (Google)
+https://web.dev/learn/css/welcome?hl=es-419
+
+Curso Accesibilidad(Google)
+https://web.dev/learn/accessibility/welcome?hl=es-419
+
+Curso Diseño Responsivo(Google)
+https://web.dev/learn/design/welcome?hl=es-419
+
+Guía Desarrollo Web (MDN)
+https://developer.mozilla.org/es/docs/Learn
+
+Guía HTML y CSS
+https://www.w3schools.com/html/default.asp
+https://www.w3schools.com/css/default.asp
+
+HTML,CSS,JAVASCRIPT
+https://manz.dev/
+
+CSS Grid:
+https://road-iguanadon-d9b.notion.site/CSS-Grid-Platzi-9ee1edb3b1304339abb4ed3f5bb62ddf
+
+HTML - CSS
+https://verdant-roadway-0d2.notion.site/Desarrollo-web-con-HTML-y-CSS-f2aa96d8af584046beeaa5093c9a458b
+
+----En Inglés----
+Funciones CSS:
+https://css-tricks.com/complete-guide-to-css-functions/
+
+Custom Properties:
+https://css-tricks.com/a-complete-guide-to-custom-properties/
+
+Media Queries:
+https://css-tricks.com/a-complete-guide-to-css-media-queries/
+
+CSS Flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+CSS Grid
+https://css-tricks.com/snippets/css/complete-guide-grid/
