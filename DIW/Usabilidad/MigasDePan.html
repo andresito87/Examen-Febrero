@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migas de Pan</title>
+    <style>
+        /* Estilos a la lista */
+        ul.migasDePan {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #eee;
+        }
+
+        /* Colocar los elementos en línea */
+        ul.migasDePan li {
+            display: inline;
+            font-size: 18px;
+        }
+
+        /* Agregar barras (/) antes/detras de cada elemento*/
+        ul.migasDePan li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        /* Agregar color a todos los enlaces de la lista */
+        ul.migasDePan li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        /* Cambiar el color a pasar con el ratón por encima */
+        ul.migasDePan li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Implementación de Migas de Pan (BreadCrumb)</h1>
+    <ul class="migasDePan">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Imágenes</a></li>
+        <li><a href="#">Primavera 2024</a></li>
+        <li>España</li>
+    </ul>
+</body>
+
+</html>

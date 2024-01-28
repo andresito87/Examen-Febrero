@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo atributo HTML accesskey </title>
+
+    <style>
+        nav {
+            border: solid black 2px;
+            width: 90%;
+            margin: 10px auto;
+
+
+        }
+
+        nav ul {
+            text-align: center;
+
+        }
+
+        nav li {
+            background-color: #faeee7;
+            display: inline;
+            margin: 10px;
+            border: solid blue 2px;
+
+        }
+
+        li a {
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        li a:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* definimos una clase para subrayar el caracter que nos proporcionará el atajo */
+        .subrayado {
+            text-decoration: underline;
+            color: blue;
+            font-weight: 800;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <!-- definición de atajos de teclas con el atributo accesskey -->
+
+            <li> <a href="https://www.w3schools.com/html/default.asp" target="_blank" accesskey="3">w<span
+                        class="subrayado">3</span>schools</a></li>
+            <li> <a href="https://www.w3big.com/es/html/default.html#gsc.tab=0" target="_blank" accesskey="b">w3<span
+                        class="subrayado">b</span>ig</a></li>
+            <li> <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" accesskey="n">Md<span
+                        class="subrayado">n</span></a></li>
+
+        </ul>
+    </nav>
+</body>
+
+</html>
