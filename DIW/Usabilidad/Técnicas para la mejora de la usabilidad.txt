@@ -1,0 +1,14 @@
+Técnicas para la mejora de la usabilidad:
+-Zona de navegación correctamente implementada, sin demasiada subdivisiones, consistente y sin enlaces rotos.
+-Uso de zona de búsqueda con input tipo search:
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+<button>Search</button>
+-Consistencia en los colores, tipo de letra y diseño en todas las páginas de nuestra web.
+-Persistencia: Colocación de los elementos de navegación en el mismo lugar para las diferentes páginas. Se permite el uso de menú hamburguesa para pantallas pequeñas.
+-Implementación de migas de pan para que el usuario sepa en todo momento, dónde está y hacia donde puede navegar dentro de nuestra web.(https://www.w3schools.com/howto/howto_css_breadcrumbs.asp)
+-Navegación sencilla y mantener al usuario informado en todo momento de las acciones que realiza. Logo como enlace a la página de inicio de la web y mapa del sitio.
+-Uso de tabindex para permitir la navegación con el teclado pulsando la tecla TAB. Ejemplo:  <input id="nombre" name="nombre" maxlength=20 placeholder="Nombre" title="Introduzca su nombre máximo 20 caracteres" tabindex="1" required>
+-Uso del atributo accesskey para crear atajos o teclas aceleradoras a elementos de la web. Se accede mediante ALT + teclaAtajo. Ejemplo: <a href="https://www.w3schools.com/html/default.asp" target="_blank" accesskey="3">w<span class="subrayado">3</span>schools</a>
+-Uso de atributo target="_blank" para que se abra una nueva pestaña en el navegador y el usuario no pierda la información que tuviera en la página que estaba visitando antes de clickar en el enlace.
+-Análisis heurístico(experto en usabilidad) y test de usabilidad.
