@@ -78,7 +78,7 @@ if (
 
 //$recordatorios = obtener_recordatorios($con, true); //Recordatorios del pasado
 $recordatorios = obtener_recordatorios($con); //Recordatorios del presente y futuro
-
+$con = null;
 ?>
 
 <!DOCTYPE html>

@@ -1,0 +1,3 @@
+Pautas de accesibilidad del W3C sobre las WCAG 2.1 :http://www.codexexempla.org/traducciones/pautas-accesibilidad-contenido-web-2.0.htm
+Pautas de Accesibilidad de Contenido Web 2.0 http://www.codexexempla.org/traducciones/pautas-accesibilidad-contenido-web-2.0.htm#content-structure-separation
+Pautas de accesibilidad del W3C sobre las WCAG 2.2 https://www.tuwebaccesible.es/nuevas-pautas-accesibilidad-wcag-2-2/#Que_diferencias_encontramos_entre_la_WCAG_22_y_WCAG_21

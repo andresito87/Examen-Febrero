@@ -1,0 +1,20 @@
+Técnicas generales para esturturar un documento:
+-Solo debe existir una etiqueta h1
+-Títulos o encabezados deben ir de mayor a menor (h1,h2,h3,...)
+-En toda web debe tener encabezados,zona de navegación y pie de página pero sin exagerada direnciación con el resto de elementos
+-No debe haber menús con muchas opciones ni muchos niveles de subdivisión.
+-Zonas laterales directamente relacionadas con las zonas de contenido.
+-Considerar el artículo (etiqueta <article></article>), como una información que tiene sentido por si misma y puede contener un encabezado y un pie.
+
+Técnicas relacionadas con elementos concretos:
+-Todas las páginas deben tener un título descriptivo, usar las etiquetas <titile></title>
+-Usar etiqueta <lang> para indicar el idioma del documento y de aquellos elementos del documento que tengan un idioma diferente al indicado en la página.
+-Orden de lectura significativo y en una secuencia lógica. Usar los atributos tabindex y/o dir (marca el sentido de lectura ltr o rtr)
+-Uso de tabindex para la recepción del foco. Si tabindex=0 significa que el elemento no coge el foco por defecto pero puede recibirlo según el orden del elemento en el documento, tabindex=-1 significa que el elemento no puede coger  el foco. En función del valor de tabindex así será el orden de cogida del foco de los elementos de menor a mayor. Ejemplo: tabindex="2".
+-Si la imagen no es decorativa, debe tener una descripción textual alternativa.
+-El texto debe adaptarse en función de los dispositivos para que sea legible.
+-Imágenes decorativas deben revisarse si son estrictamente necesarias y el atributo alt es opcional.
+-Máximo uso de etiquetas semánticas <header>,<main>,<nav>,<footer>,<section>,<article>,<figure> y <figcaption>,<aside>,<em>,<abbr>,<cite>
+-Nunca usar tablas como elemento de diseño.
+-Avisos o errores no sólo se distinguen por el color, también debe usarse una descripción en texto.
+-Contraste de color de 4,5:1 para nivel AA y 7:1 para nivel AAA (usar https://webaim.org/resources/contrastchecker/)
