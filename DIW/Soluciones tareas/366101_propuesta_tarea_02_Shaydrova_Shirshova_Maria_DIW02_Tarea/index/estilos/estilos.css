@@ -1,0 +1,666 @@
+
+/* Definimos colores con variables */
+:root{
+    --verde: #50D890;
+    --azulIntenso: #4F98CA;
+    /* color azul claro en escala RGB poco transparente */
+    --azulClaro: rgb(239, 255, 251, 0.8); 
+}
+
+@font-face {
+    font-family: "fuente";
+    src: url("../fuentes/NovaSquare-Regular.ttf");
+  }
+
+/* Fuentes externas.  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* Estilos generales de tamaño para el body del documento */
+
+
+/* ------------------------------------------------------------------ */
+/* Estilos para la primera maqueta, NO DETALLADA del index.html */
+body{
+    margin: 0;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr; 
+    grid-template-rows: auto auto auto auto; 
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+    font-family: 'Nanum Gothic', 'Roboto', sans-serif;
+}
+
+/* Estilos del header */
+header{
+    grid-area: header;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--azulClaro);
+    min-height: 10vh;
+}
+
+/* Estilos de cada subzona del header */
+header div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos particulares de la primera subzona del header con el id nombreEmpresa */
+#nombreEmpresa{
+    letter-spacing: 0.35em;
+    font-size: 20px;
+    margin: auto 20px;
+    justify-content: flex-start;
+    text-shadow: 4px 4px 8px var(--verde);
+
+}
+
+/* Logo del encabezado */
+#logo{
+    justify-content: flex-end;
+}
+
+#logo img{
+    width: 10vh
+}
+
+/* Producto en promoción en el encabezado */
+#promocion{
+    justify-content: flex-end;
+    font-size: small;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+#promocion img{
+    max-height: 8vh;
+    border-radius: 50%;
+    border: 1px solid var(--verde);
+    margin: 5px;
+}
+
+
+/* Botones del encabezado */
+#botones{
+    margin: auto 15px;
+    justify-content: flex-end;
+}
+
+.boton{
+    margin: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    letter-spacing: 0.09em;
+    transition: all 300ms;
+    color: black;
+}
+
+#contacto{
+    background-color: var(--verde);
+}
+
+#contacto:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+#sesion{
+    background-color: var(--azulIntenso);
+}
+
+#sesion:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+
+/* Estilos de la barra de navegación */
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    background-color: var(--azulIntenso);
+    border-top: 1px solid grey;
+    border-bottom   : 1px solid grey;
+}
+
+/* Estilos de la lista de navegación */
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    list-style: none;
+    color: white;
+}
+
+nav ul li{
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 300ms;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+}
+
+/* Estilos del contenido principal */
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos de cada sobzona del contenido principal */
+main div#zona1,
+main div#zona2{
+    /* display: flex; */
+    width: 90vw;
+    max-width: 100vw;
+    margin: 20px;
+    padding: 10px;
+    background-color: var(--azulClaro);
+}
+
+/* Estilos de la primera subzona del contenido principal */
+
+#zona1{
+    display: grid;
+    grid-template-columns: 60% 40%; 
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+    "tarjetas destacado"
+    "resenas tabla";
+}
+
+/* Primer elemento de la zubzona1 -> tarjetas de productos */
+
+#tarjetas{
+    grid-area: tarjetas;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.tarjeta{
+    width: 15rem;
+    height: 15rem;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 4px 4px 8px #ccc;
+}
+
+.tarjeta img{
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tarjeta .nombreProducto{
+    text-align: center;
+    font-weight: 600;
+}
+
+.tarjeta .calificacion{
+    color: grey;
+}
+
+/* Segundo elemento de la subzona1 -> producto destacado */
+
+#destacado{
+    grid-area: destacado;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 20px 80px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px var(--azulIntenso);
+    background-color: white;
+}
+
+#destacado h2{
+    text-align: center;
+}
+
+#destacadoContenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#destacadoContenido img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#destacadoContenido p{
+    margin-left: 5px;
+    color: black;
+}
+
+#destacado p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Tercer elemento de la subzona1 -> reseñas de clientes */
+#resenas{
+    grid-area: resenas;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.resena{
+    box-shadow: 4px 4px 8px #ccc;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px 0 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+.cliente{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+}
+
+.comentario{
+    align-self: center;
+    text-align: justify;
+    padding: 0 10px;
+    color: grey;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    width: 55%;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+
+.filtro {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin: auto 0 auto 0;
+}
+
+.cliente>img:hover+.filtro {
+    opacity: 1;
+}
+
+.cliente img,
+.producto img{
+    max-width: 65px;
+    max-height: 65px;
+    height: 60%;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.producto img{margin-top:40px;}
+
+.cliente img{
+    transition: all 300ms;
+    filter: grayscale(100%);
+}
+
+.cliente img:hover {
+    filter: none;
+}
+
+.producto p,
+.cliente p{
+    height: 30%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+
+/* Cuarto elemento de la subzona1 -> tabla de datos */
+#tabla{
+    padding: 0 20px 0 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+#tabla h2{
+    margin-top: 0;
+    font-weight: 100;
+}
+
+#tablaProductos{
+    padding: 20px;
+    border: 1px solid;
+    border-collapse: collapse;
+    caption-side:top;
+    background-color: white;
+}
+
+#tablaProductos caption {
+    font-size: 14px; 
+    font-weight: bold; 
+    color: black;
+    padding: 10px; 
+    text-align: center; 
+}
+
+#tablaProductos thead{
+    color: white;
+    background-color: rgb(74, 89, 124);
+    font-size: 16px;
+}
+
+#tablaProductos td:first-child {
+    width: 45%; 
+    text-align: start;
+}
+
+#tablaProductos tr td{
+    border-bottom: 1px solid rgb(74, 89, 124);
+    height: 4em;
+    text-overflow: ellipsis;
+}
+
+#tablaProductos td{
+    padding: 5px 5px;
+    user-select: none;
+}
+
+tfoot tr:last-child td {
+    height: 2em;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(74, 89, 124);
+    color: white;
+}
+
+#tablaProductos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla sup{
+    font-weight: bold;
+    text-align: start;
+}
+
+
+/* Segundo elemento de la zona principal de contenidos -> subzona2 */
+
+#zona2{
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#zona2 #titulo{
+
+    text-align: center;
+    font-family: "fuente",Arial;
+    
+
+}
+#zona2 .contenido{
+    column-count: 2;
+    column-fill: balance;
+    column-rule-color: #808080a8;
+    column-rule-style: solid;
+    column-rule-width: 3px;
+    color: #516551;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 30px 30px;
+}
+
+#zona2 p::first-letter {
+    font-size: 21px; 
+    font-weight: bold; 
+    margin-right: 5px; 
+    vertical-align:bottom;
+}
+
+#imagenesNoticias{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+}
+
+#imagenesNoticias img{
+    height: 230px;
+    width: 455%;
+    object-fit: cover;
+}
+
+/* Estilos del pie de página */
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100vw;
+    border: 0;
+    background-color: #272727;
+    color: var(--azulClaro);
+    padding: 10px 70px;
+    align-items: end;
+}
+
+/* Primer elemento del pie de página -> cookies */
+#cookies p{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+
+.cookie {
+    padding: 5px;
+    position: relative;
+}
+
+.cookie input {
+    /* Posiciona el checkbox sobre el padding-left del label */
+    position: absolute;
+}
+
+.cookie label{
+    padding: 5px 5px 5px 30px;
+}
+
+.cookie input:checked + label {
+    /* Estilo que se aplica al label cuando el checkbox está marcado */
+    outline: 1px solid var(--azulClaro); 
+}
+
+/* Segundo elemento del pie de página -> enlaces */
+#enlaces ul{
+    list-style-type: square;
+    margin-bottom: 0;
+}
+
+#enlaces ul li{
+    margin: 10px auto;
+}
+
+#enlaces ul li:hover::marker{
+    color: var(--verde);
+    cursor: pointer;
+}
+
+/* Tercer elemento del pie de página -> redes sociales */
+
+.red{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.red img{
+    padding: 5px;
+    border: 1px solid;
+    margin: 2px;
+}
+
+.red img:hover{
+    background-color: var(--verde);
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.red p{
+    margin: 5px;
+}
+
+
+/* Estilos de la págia para resolución menor igual que 620 px */
+
+@media (max-width: 620px) {
+
+    /* Quitamos la promoción del header */
+    #promocion{
+        display: none;
+    }
+
+    /* Ajustamos el margen de los botoenes */
+    #botones{
+        margin: auto 7px;
+    }
+
+    /* Ajustamos los margenes del nombre de la empresa */
+    #nombreEmpresa{
+        margin: auto 10px;
+    }
+
+    /* Cambiamos el ancho del contenedor del logo */
+    #logo{
+        width: 30%;
+    }
+
+    /* Ajustamos la lista de navegación */
+    nav ul{
+        align-items: center;
+    }
+
+    /* Ancho máxima del contenido principal */
+    main{
+        max-width: 100vw;
+    }
+
+    /* Quitamos las reseñas de los clientes y la tabla de datos */
+    #resenas,
+    #tabla{
+        display: none;
+    }
+
+    /* Colocamos los elementos que quedan en la zona1 del main de forma vertical */
+    #zona1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Quitamos las tres últimas tarejtas de productos */
+    #tarjetas #tarjeta4,
+    #tarjetas #tarjeta5,
+    #tarjetas #tarjeta6{
+        display: none;
+    }
+
+    /* Hacemos que la tarjeta se expanda en su contenedor */
+    .tarjeta{
+        width: 100%;
+        height: auto;
+    }   
+
+    /* Transformamos el título de la noticia a minúsculas */
+    #zona2 #titulo{
+        text-transform: lowercase;
+    }
+
+    /* Colocamos los párrafos uno debajo del otro para formar una única columna */
+    #zona2 .contenido{
+        display: flex;
+        text-align: justify;
+    }
+
+    /* Quitamos la primera imágen de la noticia */
+    #zona2 #imagenesNoticias #imagenNoticia1{
+        display: none;
+    }
+
+    /* Quitamos los bloques de cookies y redes sociales del pie de página */
+    #cookies,
+    #redes{
+        display: none;
+    }
+
+    /* Extendemos el elemento que queda en el pie de página */
+    #enlaces{
+        width: 90%;
+    }
+
+    /* Colocamos los enlaces de interés de forma horizontal */
+    #enlaces ul{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    /* Quitamos los markers de la lista */
+    #enlaces ul li{
+        list-style: none;
+    }
+
+    /* Al pasar por encima del enlace, éste se verá subrayado */
+    #enlaces ul li:hover{
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

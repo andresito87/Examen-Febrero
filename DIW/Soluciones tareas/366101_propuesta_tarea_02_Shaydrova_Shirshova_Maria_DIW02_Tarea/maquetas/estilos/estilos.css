@@ -1,0 +1,203 @@
+
+/* Definimos colores con variables */
+:root{
+    --verde: #50D890;
+    --azulIntenso: #4F98CA;
+    /* color azul claro en escala RGB poco transparente */
+    --azulClaro: rgb(239, 255, 251, 0.8); 
+}
+
+/* Fuentes externas.  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* Estilos generales de tamaño para el body del documento */
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* ------------------------------------------------------------------ */
+/* Estilos para la primera maqueta, NO DETALLADA del index.html */
+#noDetallado{
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto auto; 
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+    border-left: 2px solid;
+    border-right: 1px solid;
+    margin-bottom: 550PX;
+}
+
+/* Estilos del header */
+header{
+    grid-area: header;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-top: 2px solid;
+    background-color: var(--azulClaro);
+}
+
+/* Estilos de cada subzona del header */
+header div{
+    width: 100%;
+    border-right: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto auto;
+}
+
+/* Estilos particulares de la primera subzona del header con el id nombreEmpresa */
+#nombreEmpresa{
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 30px;
+    padding: 40px;
+    font-size: 20px;
+    text-shadow: 4px 4px 8px var(--verde), 8px 8px 12px orange;
+}
+
+/* Estilos particulares para las otros dos subzonas del header */
+#logo,
+#promocion{
+    height: 100%;
+}
+
+/* Estilos de la barra de navegación */
+nav{
+    grid-area: nav;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    background-color: #272727;
+}
+
+/* Estilos de la lista de navegación */
+nav ul{
+    width: 90%;
+    padding: 10px;
+    border: solid 1px black;
+    text-align: center;
+    background-color: var(--azulClaro);
+}
+
+/* Estilos del contenido principal */
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--azulIntenso);
+}
+
+/* Estilos de cada sobzona del contenido principal */
+main div{
+    display: flex;
+    height: 40%;
+    width: 90%;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--azulClaro);
+}
+
+/* Estilos del pie de página NO detallado */
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    max-width: 100vw;
+    border: 0;
+    border: 1px  #272727;
+    border-bottom: 2px #272727;
+    background-color: #272727;
+    color: var(--azulClaro);
+}
+
+/* Enunuado para cada maqueta */
+h3{
+    margin: 10px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ---------------------------------------------------------- */
+/* Estilos del pie de página de la MAQUETA DETALLADO*/
+#detallado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 100vw;
+    height: 25vh;
+    background-color: #272727;
+}
+
+/* Cargamos el estilo local */
+@font-face {
+    font-family: 'Nova Square';
+    src: local('Nova_Square'), url('fuentes/Nova_Square/NovaSquare-Regular.ttf') format('truetype');
+}
+
+/* Estilos generales de cada subzona del footer */
+#detallado div{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 70%;
+    border: 1px solid var(--azulClaro);
+    padding: 3px;
+    font-family: 'Nova Square', 'Roboto', sans-serif;
+}
+
+/* Estilos particulares para la primera subzona */
+#nombre{
+    color: var(--azulClaro);
+    justify-content: flex-end;
+    font-size: 36px;
+}
+
+/* Estilos particulares para la segunda subzona */
+#apellidos{
+    color: var(--verde);
+    box-shadow: #50D890;
+    box-shadow: -6px 0 12px var(--verde);
+    font-size: 24px;
+}
+
+/* Estilos particulares para la tercera subzona */
+#provincia{
+    color: var(--azulIntenso);
+    word-spacing: 30px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Estilo particular para el párrafo con id localidad */
+#localidad{
+    margin-right: 30px;
+    color: orange;
+}
+
+
+

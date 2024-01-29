@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> <!--Etiqueta de Cabecera-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descarga de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap" rel="stylesheet">
+    <!-- Asociamos nuestro archivo de estilos CSS = style.css -->
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <title>Begoña Verdugo Vazquez</title> <!-- Título pestaña del navegador -->
+  </head> <!--FIN Etiqueta de Cabecera-->
+  <body> <!--Etiqueta cuerpo de la página-->
+      <!--Contenidos del contenedor principal de cabecera-->
+      <header id="header"> <!--Contenedor Cabecera/header donde se incluye el menú de navegación principal y la identificación del sitio-->
+        <div id="logotipo"> <!--Capa logotipo (imagen + nombre alumna) para identificar el sitio web-->
+          <a href="#">
+            <img src="./img/photo_BeW.jpg" class="logo" alt="Foto de la Alumna Begoña Verdugo Vázquez para Tarea 1 (DIW)"/>
+            <p>Begoña Verdugo</p>
+          </a>
+          < id="menuNav1"> <!-- Contenedor con el menú principal de navegación --> 
+            <nav class="menuNav"> 
+              <ul>
+                <li><a href="#">SOBRE MI</a></li>
+                <li><a href="#">DESARROLLO</a></li>
+                <li><a href="#">MANTENIMIENTO</a></li>
+              </ul>
+            </nav><!--fin Menú principal de navegación1 -->
+          </div>
+          <div id="menuNav2"> <!-- Contenedor con otro menú de navegación/enlaces e incluido en la cabecera --> 
+            <nav class="menuNav"> 
+                <ul>
+                  <li><a href="#">BLOG</a></li>
+                  <li><a href="#">|</a></li>
+                  <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav><!--fin Menú de navegación2 -->
+          </div>
+        </div><!--fin id="logotipo" -->
+      </header><!--FIN Contenedor Cabecera/header--> 
+      <!-- Contenedor Principal donde se incluirán las 3 secciones distintas de CONTENIDOS -->
+      <main id="contenedorPrincipal"> 
+        <article id="contenidos1">
+          <!--<a href="#">
+            <img src="./img/imagen1.jpg" class="imgPrincipal" alt="Portátiles sobre mesas de trabajo"/>
+          </a>  -->
+          <span class="fotoP">
+            <img src="./img/imagen1.jpg" class="imgPrincipal" alt="Portátiles sobre mesas de trabajo"/>
+          </span> 
+          <div id="contenidoP">
+            <h1>BEGOÑA VERDUGO</h1>
+            <h2>Desarrolladora y programadora web</h2>  
+            <p>Si necesitas un cambio digital en tu empresa con un giro atractivo y funcional. 
+            O lo que necesitas mantener una web que ya tienes en marcha contáctame y lo hablamos...</p>             
+          </div>
+          <p>
+            <button class="boton"type="submit">Quiero contactar</button>
+          </p>
+        </article> <!--fin id="contenidos1"-->
+        <article id="contenidos2">
+          <h1>Descubre mis Servicios</h1>
+          <div class="servicio">
+            <a href="#">
+              <img src="./img/imagen2.jpg" class="img" alt="Código de programación en un portátil"/>
+            </a>
+            <h3>DESARROLLO WEB</h3>
+            <p>Hacemos posible que tu presencia en línea sea única y efectiva gracias a un desarrollo web personalizado. Cuéntanos cuales son tus necesidades y objetivos y nosotros las transformaremos en realidad.</p>
+          </div>
+          <div class="servicio">
+            <a href="#">
+              <img src="./img/imagen3.jpg" class="img" alt="Personas en sitio de trabajo intercambiando opiniones"/>
+            </a>
+            <h3>MANTENIMIENTO WEB</h3>
+            <p>Ya sabemos que el trabajo en línea nunca se detiene, y tu sitio web requiere de un cuidado constante. Nos hacemos cargo del mantenimiento y el soporte para garantizar un funcionando sin problemas y seguro.</p> 
+             <!--Solo tendrás que preocuparte de concentrarte en tu negocio, nosotros nos encargamos del resto!.-->
+          </div>
+        </article> <!--fin id="contenidos2"-->
+        <div id="contenidos3">
+          <aside id="columnas"> <!-- Contenedor de las 3 columnas de enlaces -->
+            <div id="enlacesColumna"> <!--Contenedor para cada columna de enlaces-->
+              <nav class="menuEnlaces"> 
+                <h3>Servicios</h3>    
+                <ul>
+                  <li><a href="#">Desarrollo web</a></li>
+                  <li><a href="#">Mantenimiento web</a></li>
+                </ul>
+              </nav>
+            </div> <!--fin enlaces de enlacesColumna 1 -->
+            <div id="enlacesColumna"> 
+              <nav class="menuEnlaces"> 
+                <h3>Sobre mí</h3>     
+                <ul>
+                  <li><a href="#">Conóceme</a></li>
+                  <li><a href="#">Proyectos</a></li>
+                  <li><a href="#">Contacto</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </nav>
+            </div> <!--fin enlaces de enlacesColumna 2 -->
+            <div id="enlacesColumna"> 
+              <nav class="menuEnlaces"> 
+                <h3>Blog</h3>      
+                <ul>
+                  <li><a href="#">Últimas publicaciones</a></li>
+                  <li><a href="#">Publicaciones populares</a></li>
+                  <li><a href="#">X (Twitter)</a></li>
+                </ul>
+              </nav>
+            </div> <!--fin enlaces de enlacesColumna 3 -->
+          </aside><!--fin id=columnas -->
+          <p>
+            <button class="boton"type="submit">Hablemos!</button>
+          </p>
+        </main> <!--fin id="contenidos3"-->
+      <!-- Pie de página-->  
+      <footer>
+        <div id="contenedorPie"> <!--Capa id=contenedorPie-->
+          <div id="pieTexto"> <!-- datos varios-->  
+            <p class="negrita">Autor: Begoña Verdugo Vázquez - Práctica Unidad1 - DIW</p>
+            <p>(c)2023 Bego Verdugo</p>
+          </div>
+          <nav class="menuNav"> 
+            <ul>
+              <li><a href="#">AVISO LEGAL</a></li>
+              <li><a href="#">|</a></li>
+              <li><a href="#">POLÍTICAS DE PRIVACIDAD</a></li>
+            </ul>
+          </nav><!--fin Menú de navegación pie -->
+        </div> <!--fin id="contenedorPie"-->
+      </footer>
+    </div> <!--fin id="contenedorPrincipal"-->
+  </body> <!--FIN Etiqueta cuerpo de la página-->
+</html>
