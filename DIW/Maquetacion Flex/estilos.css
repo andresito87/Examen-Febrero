@@ -1,0 +1,78 @@
+/*Reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Estilos*/
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.contenedor-padre {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.productos-contenedor1,
+.productos-contenedor2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.producto-tarjeta {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  height: 350px;
+}
+
+.producto-tarjeta img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.productos-contenedor2 .producto-tarjeta::after {
+  content: "Mejor Precio Garantizado";
+  color: orange;
+  font-weight: bold;
+}
+
+.producto-tarjeta:hover {
+  background-color: blueviolet;
+}
+
+/*Responsive: Media Queries*/
+@media screen and (max-width: 900px) {
+  .productos-contenedor2 {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productos-contenedor1 {
+    flex-direction: column;
+  }
+}
