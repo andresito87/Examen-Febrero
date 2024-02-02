@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Formulario 2</title>
+    <style>
+        /* Cuando el campo el inválido el borde del campo lo ponemos de color rojo*/
+        input:invalid {
+            border: solid 2px red;
+        }
+
+        /* Indicamos con after los campos que son obligatorios */
+        .obligatorio::after {
+            content: " (Obligatorio)";
+        }
+
+        /* Cuando el campo es válido el borde lo ponemos de color verde*/
+        input:valid {
+            border: solid 2px green;
+        }
+
+        /* Aquellos campos que cogen el foco se le pone en fondo de color azul*/
+        input:focus {
+            background: aqua;
+        }
+
+        /*Seleccionamos todos los campos desactivados y le apilcamos estilos*/
+        input:disabled {
+            opacity: 0.6;
+            background-color: lemonchiffon;
+            border: solid 1px black;
+            color: black;
+        }
+
+        /*Todos lo campos activos se ponen con letra de color azul*/
+        input:enabled {
+            color: blue;
+        }
+
+        fieldset {
+            width: 60%;
+            background-color: azure;
+        }
+
+        legend {
+            color: blue;
+        }
+
+        div {
+            width: 200px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div>
+
+</div>
+<form action="" autocomplete="on" validate>
+    <!-- Podemos indicar que el formulario no se valide con novalidate-->
+    <!-- El atributo autocomplete, puede hacerse a nivel de campo. -->
+    <fieldset>
+        <legend>Datos Personales</legend>
+        <label class="obligatorio" for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" minlength="3" maxlength="20" placeholder="Nombre"
+               title="Introduzca su nombre máximo 20 caracteres" tabindex="1" required>
+        <span class="mensaje"> </span>
+        <br>
+        <br>
+
+        <label class="obligatorio" for="apellidos">Apellidos:</label>
+        <input id="apellidos" name="apellidos" minlength=3 maxlength=30 placeholder="Apellidos"
+               title="Introduzca sus apellidos máximo 20 caracteres" tabindex="1" required>
+        <span class="mensaje"> </span>
+        <br>
+        <br>
+
+        <label class="obligatorio" for="correo">Correo Electrónico: </label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"
+               title="Introduzca su correo electrónico" tabindex="3" required>
+        <span class="mensaje"> </span>
+        <br>
+        <br>
+
+    </fieldset>
+
+    <button>Enviar</button>
+    <button type="reset">Borrar</button>
+</form>
+
+</body>
