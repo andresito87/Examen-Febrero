@@ -1,7 +1,7 @@
-Técnicas generales para esturturar un documento:
+Técnicas generales para estructurar un documento:
 -Solo debe existir una etiqueta h1
 -Títulos o encabezados deben ir de mayor a menor (h1,h2,h3,...)
--En toda web debe tener encabezados,zona de navegación y pie de página pero sin exagerada direnciación con el resto de elementos
+-En toda web debe tener encabezados,zona de navegación y pie de página pero sin exagerada diferenciación con el resto de elementos
 -No debe haber menús con muchas opciones ni muchos niveles de subdivisión.
 -Zonas laterales directamente relacionadas con las zonas de contenido.
 -Considerar el artículo (etiqueta <article></article>), como una información que tiene sentido por si misma y puede contener un encabezado y un pie.
