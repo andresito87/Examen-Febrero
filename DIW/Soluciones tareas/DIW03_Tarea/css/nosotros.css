@@ -1,0 +1,714 @@
+/***********/
+/* FUENTES */
+/***********/
+/* Importamos la fuente externa por url */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+/* Cargamos una fuente externa de forma local */
+@font-face {
+  font-family: "Roboto"; /* nombre de la fuente */
+  src: url(../fuentes/Roboto-Regular.ttf); /* Ubicación del archivo */
+  font-weight: normal; /* Peso de la fuente */
+  font-style: normal; /* Estilo de la fuente */
+}
+/***********************/
+/* CUERPO DE LA PÁGINA */
+/***********************/
+body {
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  display: grid; /* Definimos este contendor grid */
+  grid-template-rows: repeat(
+    4,
+    auto
+  ); /* Dividimos el cuerpo página en 4 filas con tamaño automático */
+  grid-template-areas: "cabecera_navegacion" "migas" "zona_contenido" "pie_pagina"; /* Nombre de cada fila */
+  font-family: "Roboto", Arial, sans-serif; /* Seleccionamos la fuente externa cargada de forma local y dos fuentes alternativas */
+}
+/*************************/
+/* CABECERA Y NAVEGACIÓN */
+/*************************/
+.cabecera_navegacion {
+  grid-area: cabecera_navegacion; /* Fila de la cuadrícula del cuerpo (body) */
+  display: grid; /* Definimos este contendor grid */
+  grid-template-rows: repeat(
+    2,
+    auto
+  ); /* Dividimos la cabecera y navegación en 2 filas con tamaño automático */
+  grid-template-areas: "cabecera" "zona_navegacion"; /* Nombre de las filas */
+  position: fixed; /* Fijamos la cabecera y la navegación */
+  width: 100%; /* Damos todo el ancho */
+  z-index: 99999; /* Posición para asegurar que esté al frente */
+  background: #ffffff; /* Color de fondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Línea sombreada */
+}
+/************/
+/* CABECERA */
+/************/
+.cabecera {
+  grid-area: cabecera; /* Fila de la cuadrícula de la cabecera y navegación */
+  display: grid; /* Definimos este contendor grid */
+  grid-template-columns: 2fr 1fr 2fr; /* Dividimos la cabecera en 3 columnas con tamaño automático */
+  grid-template-areas: "cabecera-sub1 cabecera-sub2 cabecera-sub3"; /* Nombre de cada columna */
+  grid-gap: 5px; /* Separación entre las áreas */
+  align-items: center; /* Alineamos los elementos secundarios verticalmente en el contenedor */
+}
+/* Cabecera - Subzona 1 */
+.cabecera-sub1 {
+  font-family: "Ubuntu"; /* Nombre de la fuente */
+  grid-area: cabecera-sub1; /* Columna de la cuadrícula de la cabecera */
+  color: #3a5984; /* Color del texto */
+  font-size: 70%; /* Tamaño de la fuente (pensando en pantallas pequeñas) */
+  text-align: center; /* Alinea el texto centrado */
+}
+/* Cabecera - Subzona 2 */
+.cabecera-sub2 {
+  grid-area: cabecera-sub2; /* Columna de la cuadrícula de la cabecera */
+  display: flex; /* Definimos este contendor flexible */
+  justify-content: center; /* Alinea el logo horizontalmente */
+}
+.cabecera-sub2 img {
+  width: 40px; /* Ancho en píxeles */
+  height: auto; /* La altura se ajusta automáticamente para mantener la proporción original */
+  max-width: 70%; /* Ancho máximo de la imagen en el 70% del ancho del contenedor */
+}
+/* Cabecera - Subzona 3 */
+.cabecera-sub3 {
+  grid-area: cabecera-sub3; /* Columna de la cuadrícula de la cabecera */
+  display: flex; /* Definimos este contendor flexible */
+  justify-content: center; /* Alinea los elementos secundarios horizontalmente */
+}
+.cabecera-sub3 img {
+  display: none; /* Oculta el elemento en la página */
+  margin: 0 15px 0 0; /* Margen derecho */
+  width: 40px; /* Ancho en píxeles */
+  height: auto; /* La altura se ajusta automáticamente para mantener la proporción original */
+}
+.cabecera-sub3 button {
+  font-family: "Ubuntu", sans-serif; /* Fuente utilizada en los botones */
+  margin: 0 2px; /* Márgenes: izquierdo y derecho */
+  color: #ff6b6b; /* Color del texto */
+  font-size: 11px; /* Tamaño de la fuente (pensando en pantallas pequeñas) */
+  background-color: #3a5984; /* Color del fondo del botón */
+  padding: 5px; /* Relleno en todos los lados */
+}
+.cabecera-sub3 button:hover {
+  background-color: #ff6b6b; /* Color del fondo del botón al pasar el ratón */
+  color: #3a5984; /* Color del texto al pasar el ratón */
+}
+/********************************************************/
+/* HAMBURGUESA (solo en dispositivos de menos de 620px) */
+/********************************************************/
+#menu {
+  display: none; /* Ocultamos el checkbox */
+}
+.hamburguesa {
+  font-size: 28px; /* Tamaño del icono de hamburguesa*/
+  position: fixed; /* Lo fijamos */
+  margin-top: 70px; /* Aplicamos un margen superior para no apliarse con la cabecera */
+  margin-left: 90%; /* Definimos un margen de porcentaje para asegurar que sea responsive */
+  cursor: pointer; /* Indicamos que el icono puede ser clicado */
+  color: #3a5984; /* Color del icono */
+  background-color: #ffffff; /* Aplicamos un color de fondo */
+  padding: 0 2px; /* Damos un relleno izquierdo y derecho */
+  border: 3px solid #3a5984; /* Definimos un borde para auemtar su visibilidad */
+  border-radius: 10%; /* Redondeamos las esquinas del borde */
+}
+#menu:checked + .hamburguesa + .zona_navegacion {
+  display: initial; /* Muestra el menú cuando el input de hamburguesa está marcado */
+}
+/**********************/
+/* ZONA DE NAVEGACIÓN */
+/**********************/
+.zona_navegacion {
+  grid-area: zona_navegacion; /* Fila de la cuadrícula de la cabecera y navegación */
+  display: none; /* Ocultamos por defecto en dispositivos con pantalla más pequeña */
+}
+/* Menú principal */
+.zona_navegacion ul {
+  list-style: none; /* Quitamos los estilos de numeración/viñetas de la lista */
+  padding: 2px; /* Relleno */
+  display: flex; /* Definimos este contendor flexible */
+  justify-content: center; /* Alinea los elementos secundarios horizontalmente */
+  align-items: center; /* Alinea los elementos secundarios verticalmente en el contenedor */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+}
+.zona_navegacion li {
+  margin: 5px 0; /* Márgenes: arriba y abajo */
+  text-align: center; /* Alinea el texto centrado */
+  flex: 1 0 100%; /* El elemento dispone horizontalmente de todo el espacio disponible horizontalmente sin permitir que se contraiga */
+}
+.zona_navegacion li a {
+  text-decoration: none; /* Elimina la decoración de un enlace */
+  font-size: 16px; /* Tamaño de la fuente (pensando en pantallas pequeñas) */
+  color: #3a5984; /* Color del texto */
+  display: block; /* Cambia el enlace de línea a bloque */
+  padding: 10px; /* Relleno */
+}
+.zona_navegacion li a:hover,
+.zona_navegacion li a:focus-within {
+  color: #ff6b6b; /* Color del texto al pasar por encima o después de clicar en él*/
+}
+.zona_navegacion ul li:focus-within ul {
+  display: flex; /* Muestra el submenú al hacer clic en "Desarrollo Software"*/
+  flex-direction: column; /* Alinea los elementos verticalmente en dispositivos con pantalla más pequeña*/
+}
+/* Menú secundario */
+.zona_navegacion ul ul {
+  display: none; /* Oculta el submenú por defecto*/
+  min-width: 100%; /* Ancho completo del submenú en dispositivos con pantalla más pequeña */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra del submenú */
+  color: #3a5984; /* Color del texto */
+  background: #f6f6f8; /* Color de fondo */
+}
+/****************/
+/* MIGAS DE PAN */
+/****************/
+.migas {
+  grid-area: migas; /* Fila de la cuadrícula del cuerpo (body) */
+  margin-top: 60px; /* Margen superior para pantallas pequeñas al haber fijado la cabecera (el menú de navegación está oculto) */
+  display: grid; /* Contendor grid */
+  grid-template-rows: repeat(
+    2,
+    auto
+  ); /* Dividimos la sección de migas de pan en 2 filas con tamaño automático */
+  padding-left: 30px; /* Relleno izquierdo en pantallas pequeñas */
+  padding: 10px 30px; /* Relleno superior e inferior */
+  color: #3a5984; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente en pantallas pequeñas */
+  background: #cdd4e6; /* Color de fondo */
+}
+.migas span {
+  color: #3a5984; /* Color del texto */
+}
+.migas ol {
+  display: inline-flex; /* Contenedor flex en línea */
+  padding: 0; /* Quitamos relleno */
+}
+.migas ol li {
+  list-style: none; /* Quitamos los estilos de numeración/viñetas de la lista */
+  margin-right: 10px; /* margen izquierdo */
+}
+.migas ol li a {
+  color: rgb(39, 39, 39);
+}
+.migas ol li a:hover {
+  color: #ff6b6b; /* Color del texto al pasar por encima */
+}
+#aqui {
+  font-weight: bold; /* Negrita */
+}
+/*********************/
+/* ZONA DE CONTENIDO */
+/*********************/
+.zona_contenido {
+  grid-area: zona_contenido; /* Fila de la cuadrícula del cuerpo (body) */
+}
+.zona_contenido h1 {
+  text-align: center; /* Centramos el texto */
+  color: #3a5984; /* Color del texto */
+  font-size: 40px; /* Tamaño del texto */
+  margin-bottom: 40px; /* Margen inferior */
+}
+/* Zonas */
+.zonas {
+  display: flex; /* Definimos un contendor flex para crear las 5 zonas que se piden */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  flex-direction: row; /* Las zonas las distribuimos en filas */
+}
+.zonas h2 {
+  text-align: center; /* Centramos el texto */
+  color: #3a5984; /* Color del texto */
+  padding: 5px; /* Relleno */
+}
+.zonas h3 {
+  text-align: center; /* Centramos el texto */
+  font-size: 20px; /* Tamaño del texto */
+}
+.zonas h4 {
+  color: #3a5984; /* Color del texto */
+}
+.zonas p {
+  text-align: justify; /* Justificamos los párrafos */
+}
+.zona_1,
+.zona_2,
+.zona_3,
+.zona_4,
+.zona_5 {
+  flex-basis: 100%; /* Ocupar el 100% del ancho disponible de la fila en dispositivos con pantalla más pequeña */
+}
+/* Zona 1 */
+.productos {
+  display: flex; /* Definimos un contenedor flex */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  justify-content: center; /* Alineamos los elementos del contenedor en el centro horizontalmente */
+}
+.zona_1 .producto {
+  width: 40%; /* Ancho al 40% del contenedor padre */
+  padding: 20px; /* Relleno en todos los lados */
+  border: 2px solid #ff6b6b; /* Borde de la tarjeta */
+  border-radius: 2%; /* Establece el radio de las esquinas del elemento */
+  margin: 10px; /* Márgenes */
+  background-color: #f5f8fa; /* Color del fondo de la tarjeta */
+  min-width: 250px; /* Ancho mínimo en píxeles */
+}
+.zona_1 .producto .imagen_producto {
+  text-align: center;
+}
+.zona_1 .producto .imagen_producto img {
+  width: 30%; /* Ancho de la imagen con respecto al contenedor padre */
+  margin: 10px; /* Márgenes */
+}
+.zona_1 .producto .comentario h3 {
+  justify-self: end;
+}
+.zona_1 .producto .comentario p {
+  font-style: italic; /* Damos el estilo de cursiva a los comentarios */
+  font-size: 90%; /* Aplicamos el tamaño del texto en porcentaje */
+}
+.zona_1 .producto .comentario .autor {
+  color: #ff6b6b; /* Aplicamos un color distinto al autor del comentario */
+}
+/* Zona 2 */
+.zona_2 {
+  display: flex; /* Definimos este contendor flexible */
+  justify-content: center; /* Centramos horizontalmente los elementos */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+}
+.zona_2 a {
+  color: #3a5984; /* Color del texto */
+  margin-bottom: 30px; /* Margen superior */
+}
+.zona_2 a:hover {
+  background-color: #b5acac66; /* Color de fondo al pasar por encima */
+  font-weight: bold; /* En negrita al pasar por encima */
+}
+.referencia {
+  display: flex; /* Definimos este contendor flexible */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  width: 90%; /* Ancho al 100% del contenedor padre */
+  margin: 20px 0; /* Margen superior e inferior */
+}
+.referencia img {
+  width: auto; /* Ancho automático */
+  height: 50px; /* Alto de la imagen */
+  margin-right: 50px; /* Margen derecho */
+}
+.referencia .autoria {
+  margin-bottom: 20px; /* Margen inferior */
+}
+.referencia .autoria .autor {
+  color: #ff6b6b; /* Color del texto */
+  margin-bottom: 0; /* Quitamos margen inferior */
+}
+.referencia .autoria .fecha {
+  font-style: italic; /* Cursiva */
+  color: dimgrey; /* Color del texto */
+  margin-top: 0; /* Quitamos margen superior */
+}
+.referencia .autoria a {
+  text-decoration: none; /* Quitamos la decoración del enlace */
+  color: #3a5984; /* Color del texto */
+  margin: 10px 0 20px 0; /* Margen superior e inferior */
+}
+.referencia .autoria a:hover {
+  background-color: #ff6b6b; /* Añadimos un color de fondo cuando se pasa por encima con el ratón */
+}
+/* Zona 3 */
+.empleados {
+  display: flex; /* Contendedor flex */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  justify-content: space-around; /* Damos espacio alrededor los elementos de forma horizontal*/
+}
+.empleado {
+  display: flex; /* Definimos este contendor flexible */
+  width: 30%; /* Ancho al 100% del contenedor padre */
+  min-width: 250px; /* Ancho mínimo en píxeles */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  align-items: center; /* Centra horizontalmente los elementos hijos */
+  flex-direction: column; /* Dirección en columnas */
+  margin-bottom: 40px; /* Margen inferior */
+  box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.1); /* Sombras de tarjeta empleado */
+  padding: 10px 0; /* Relleno arriba y abajo */
+}
+.empleado img {
+  width: 100px; /* Ancho de la imagen */
+  height: auto; /* Alto automático para mantener la proporcionalidad */
+  border-radius: 50%; /* Imagen circular */
+}
+/* Zona 4 */
+.zona_4 {
+  display: flex; /* Contenedor flex */
+  justify-content: center; /* Alineamos los elementos horizontalmente */
+}
+table {
+  border-collapse: collapse; /* Para que los bordes se junten */
+  width: 90%; /* Ancho de la tabla */
+}
+table tr {
+  display: flex; /* Contenedor flex */
+  flex-direction: column; /* Dirección en columnas  en pantallas más pequeñas*/
+  border: 1px solid #3a5984; /* Borde */
+  padding: 5px; /* Relleno */
+  margin-bottom: 16px; /* Margen inferior */
+}
+table td[data-titulo] {
+  display: flex; /* Contenedor flexible*/
+  justify-content: space-around; /* Espacio al rededor del elemento */
+}
+table td[data-titulo]::before {
+  content: attr(
+    data-titulo
+  ); /* Depués del contenido de la celda añadimos el título */
+  width: 280px; /* Espacio entre el título de la celda y su contenido */
+}
+table thead {
+  display: none; /* Ocultamos la cabecera de la tabla en los dispositivos con pantallas más pequeñas */
+}
+.clientes {
+  text-align: center; /* Texto centrado */
+  font-weight: bold; /* Negrita */
+  background-color: #ffb2b2; /* Color de fondo */
+  padding: 10px; /* Relleno */
+}
+.totales {
+  text-align: center; /* Texto centrado */
+  font-weight: bold; /* Negrita */
+  background-color: rgba(181, 172, 172, 0.3); /* Color de fondo */
+  padding: 10px; /* Relleno */
+}
+.servicio {
+  font-weight: bold; /* Negrita */
+}
+caption {
+  margin-bottom: 10px; /* Margen inferior */
+}
+/* Zona 5 */
+.zona_5 {
+  margin-top: 30px; /* Margen superior con respecto a la zona 4 */
+}
+form {
+  max-width: 90%; /* Ancho completo del contenedor en pantallas más pequeñas */
+  margin: 0 auto; /* Centramos el formulario asignándole márgenes automáticos */
+}
+fieldset {
+  margin-bottom: 20px; /* Margen inferior */
+}
+legend {
+  font-weight: bold; /* Letra en negrita */
+  margin-bottom: 10px; /* Margen inferior */
+}
+.mensaje {
+  font-size: 90%; /* Tamaño de la fuente en porcentaje */
+  color: #ff6b6b; /* Color del texto */
+  margin-left: 10px; /* Margen izquierdo */
+}
+.grupo_campo {
+  margin: 20px 10px; /* Márgenes */
+  display: flex; /* Contenedor flex */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  justify-content: left; /* Alineados horizontalmente a la izquierda */
+  align-items: center; /* Alineados los elementos verticalmente en el centro */
+  gap: 5px; /* Espacio entre los elementos flex */
+}
+input:invalid {
+  border: solid 2px #ff6b6b; /* Cuando el campo es inválido se pone un borde rojo */
+}
+input:valid {
+  border: solid 3px #3a5984; /* Cuando el campo es válido se pone un borde azul */
+}
+input:valid + .mensaje {
+  visibility: hidden; /* Cuando es válido se oculta el mensaje */
+}
+#persona {
+  width: 50%; /* Ancho con respecto al espacio disponible */
+  height: 25px; /* Alto de campo */
+}
+#email,
+#producto {
+  width: 40%; /* Ancho con respecto al espacio disponible */
+  height: 25px; /* Alto de campo */
+}
+.dia_turno {
+  display: flex; /* Contenedor flex */
+  flex-wrap: wrap; /* Los elementos se envuenven en la siguiente línea si no hay espacio horizontal en el contenedor */
+  gap: 10%; /* Espacio entre los elementos flex en porcentaje */
+}
+#dia {
+  width: 150px; /* Ancho con respecto al espacio disponible */
+  height: 25px; /* Alto de campo */
+}
+#turno {
+  width: 100px; /* Ancho con respecto al espacio disponible */
+  height: 25px; /* Alto de campo */
+}
+#ayuda_seleccion_multiple {
+  display: none;
+}
+select[multiple] {
+  width: 60%; /* Ancho con respecto al espacio disponible */
+  height: auto; /* Alto automático */
+}
+select[multiple] option:checked {
+  background-color: #3a5984; /* Color de fondo si se ha seleccionado */
+  color: #ddd; /* Color del textp */
+  font-weight: bold; /* Negrita */
+}
+#observaciones {
+  width: 80%; /* Ancho con respecto al espacio disponible */
+  height: 100px; /* Alto */
+}
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+form button {
+  font-family: "Ubuntu", sans-serif; /* Fuente utilizada en los botones */
+  margin: 20px; /* Márgenes */
+  color: white; /* Color del texto */
+  font-size: 11px; /* Tamaño de la fuente (pensando en pantallas pequeñas) */
+  background-color: #3a5984; /* Color del fondo del botón */
+  padding: 5px; /* Relleno en todos los lados */
+  width: 150px; /* Ancho */
+}
+form button:hover {
+  background-color: #ff6b6b; /* Color del fondo del botón al pasar el ratón */
+  color: #3a5984; /* Color del texto al pasar el ratón */
+}
+/*****************/
+/* PIE DE PÁGINA */
+/*****************/
+.pie_pagina {
+  grid-area: pie_pagina; /* Fila de la cuadrícula del cuerpo (body) */
+  display: flex; /* Definimos este contendor flexible */
+  justify-content: space-between; /* Distribuye el espacio disponible entre los elementos */
+  align-items: center; /* Alinea los elementos secundarios verticalmente en el contenedor */
+  font-family: "Ubuntu";
+}
+.enlaces {
+  display: flex; /* Definimos este contendor flexible */
+  border: 3px solid rgba(181, 172, 172, 0.8); /* Borde del contenedor */
+  width: 100%; /* Ancho al 100% del contenedor padre */
+  height: 100px; /* Alto en píxeles */
+  padding: 10px; /* Relleno en todos los lados */
+  background-color: #3a5984; /* Color del fondo */
+  align-items: center; /* Alinea los elementos secundarios verticalmente en el contenedor */
+}
+.cookies,
+.redes-sociales {
+  display: none; /* Oculta el elemento en la página */
+}
+.enlaces ul {
+  list-style-type: none; /*Quita los marcadores o numeración de la lista */
+}
+.enlaces ul li a {
+  text-decoration: none;
+  color: black;
+}
+.enlaces li:active {
+  text-decoration: underline; /* Aplica subrayado al texto */
+}
+/*---------------------------------------------------*/
+/* ESTILOS PARA PANTALLAS MÁS PEQUÑAS (MENOS DE 620PX) */
+/*---------------------------------------------------*/
+@media screen and (min-width: 620px) {
+  /************/
+  /* CABECERA */
+  /************/
+  /* Cabecera - Subzona 1 */
+  .cabecera-sub1 {
+    font-size: 100%; /* Tamaño de la fuente pantallas más grandes*/
+    letter-spacing: 3px; /* Espacio entre las letras del nombre se la empresa */
+  }
+  /* Cabecera - Subzona 2 */
+  .cabecera-sub2 img {
+    width: 60px; /* Mostramos el logo más grande */
+  }
+  /* Cabecera - Subzona 3 */
+  .cabecera-sub3 img {
+    display: flex; /* Definimos este contendor flexible para mostrar la imagen */
+  }
+  .cabecera-sub3 button {
+    margin: 0 10px; /* Márgenes: izquierdo y derecho */
+    font-size: 16px; /* Tamaño de la fuente pantallas más grandes*/
+  }
+  /***************/
+  /* HAMBURGUESA */
+  /***************/
+  .hamburguesa {
+    display: none; /* Ocultamos el menú de hamburguesa en pantallas más grandes */
+  }
+  /**********************/
+  /* ZONA DE NAVEGACIÓN */
+  /**********************/
+  .zona_navegacion {
+    display: initial; /* Mostramos el menú por defecto en pantallas grandes */
+  }
+  .zona_navegacion li {
+    flex: auto; /* Tomará automáticamente el tamaño disponible */
+  }
+  .zona_navegacion li a {
+    margin-top: 5px; /* Damos más margen arriba */
+    font-size: 20px; /* Tamaño de la fuente (pensando en pantallas grandes) */
+  }
+  .zona_navegacion ul li:focus-within ul,
+  .zona_navegacion ul li:hover ul {
+    display: flex; /* Muestra el submenú al pasar por encima o hacer clic en "Desarrollo Software" */
+    flex-direction: row; /* Alinea los elementos horizontalmente en pantallas grandes */
+    position: fixed; /* Fijamos el submenú */
+  }
+  .zona_navegacion ul ul {
+    min-width: 400px; /* Ancho mínimo del submenú */
+    margin-left: 20px; /* Margen izquierdo */
+  }
+  /****************/
+  /* MIGAS DE PAN */
+  /****************/
+  .migas {
+    margin-top: 180px; /* Margen superior teniendo en cuenta la cabecera y zona de navegación fijadas */
+    padding-left: 40px; /* Relleno izquierdo */
+    font-size: 16px; /* Tamaño de texto */
+    display: inline-flex; /* Definimos un flex en línea */
+    align-items: center; /* Centramos verticalmente los elementos */
+  }
+  .migas ol {
+    margin-left: 10px; /*Margen izquierdo de la lista con respecto al texto span */
+  }
+  /*********************/
+  /* ZONA DE CONTENIDO */
+  /*********************/
+  .zona_contenido {
+    margin: 10px 40px; /* Márgenes de zona de contenido en pantallas más grandes */
+  }
+  .zonas {
+    flex-direction: initial; /* Dirección de los elementos flex inicial */
+  }
+  /* Zona 1 */
+  .zona_1 {
+    flex-basis: 75%; /* Ocupa un 75% del espacio disponible de una fila */
+  }
+  /* Zona 2 */
+  .zona_2 {
+    flex-basis: 25%;
+  }
+  /* Zona 3, Zona 4 y Zona 5 */
+  .zona_3,
+  .zona_4,
+  .zona_5 {
+    flex: 100%;
+  }
+  /* Zona 4 */
+  .zona_4 {
+    display: block; /* Cambia el estilo de flex a bloque */
+  }
+  table {
+    display: table; /* Tabla */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+  }
+  table tr {
+    display: table-row; /* Cambia el estilo de flex a fila de tabla */
+    border: #ddd; /* Color del borde */
+  }
+  table td[data-titulo] {
+    display: table-cell; /* Cambia el estilo de flex a celda de tabla */
+  }
+  table td[data-titulo]::before {
+    content: ""; /* Elimina el contenido antes del td */
+    width: auto; /* Cambia el ancho según sea necesario */
+  }
+  table thead {
+    display: table-header-group; /* Cambia el estilo de oculto a grupo de encabezado de tabla */
+  }
+  table thead tr th {
+    padding: 15px 5px; /* Relleno */
+  }
+  .servicio {
+    display: none; /* Oculta las celdas con identificador servicio */
+  }
+  #vacio {
+    background-color: white; /* Color de fondo de las celdas vacias */
+    border: white; /* Borde */
+  }
+  .desarrollo {
+    background-color: #ff6b6b2f; /* Color de fondo */
+  }
+  .sistemas {
+    background-color: rgba(181, 172, 172, 0.3); /* Color de fondo */
+  }
+  .clientes,
+  .totales {
+    background-color: initial; /* Quitamos el color de fondo que se había dado para dispositivos con pantallas más pequeñas */
+  }
+  th,
+  td {
+    border: 1px solid #ddd; /* Borde */
+    text-align: center; /* Texto centrado */
+    padding: 5px; /* Relleno */
+  }
+  tbody tr:nth-child(even) {
+    background-color: rgba(
+      181,
+      172,
+      172,
+      0.1
+    ); /* Color del fondo de las filas pares */
+  }
+  /* Zona 5 */
+  form {
+    max-width: 80%; /* Ancho máximo del contenedor en pantallas más grandes */
+  }
+  form button {
+    margin: 0 20px; /* Márgenes: izquierdo y derecho */
+    font-size: 16px; /* Tamaño de la fuente pantallas más grandes*/
+  }
+  #ayuda_seleccion_multiple {
+    display: initial; /* Hacemos visible en pantallas más grandes */
+    font-size: 80%; /* Tamaño del texto */
+    color: dimgrey; /* Color del texto */
+    margin-left: 10px; /* Margen izquierdo */
+  }
+  /****************/
+  /*PIE DE PÁGINA */
+  /****************/
+  .cookies,
+  .enlaces,
+  .redes-sociales {
+    display: flex; /* Definimos este contendor flexible */
+    border: 2px solid rgba(181, 172, 172, 0.8); /* Borde del contenedor */
+    width: 34%; /* Ancho al 34% del contenedor padre */
+    height: 100px; /* Alto en píxeles */
+    padding: 10px; /* Relleno en todos los lados */
+    background-color: #3a5984; /* Color del fondo */
+    align-items: center; /* Alinea los elementos secundarios verticalmente en el contenedor */
+  }
+  .redes-sociales {
+    justify-content: flex-end; /* Posicionamos al final del contenedor: derecha */
+  }
+  .cookies label {
+    display: block; /* Se muestran los elementos como bloques */
+  }
+  .cookies label:hover {
+    color: rgba(181, 172, 172, 0.8); /* Color de las letras */
+  }
+  .enlaces ul {
+    list-style-type: square; /* Viñetas */
+  }
+  /* Acción al pasar por el elemento */
+  .enlaces li:hover {
+    color: #ff6b6b; /* Color del texto */
+  }
+  .redes-sociales img {
+    width: 40px; /* Ancho en píxeles */
+    height: 40px; /* Alto en píxeles */
+    padding: 10px; /* Relleno */
+    background-color: rgba(181, 172, 172, 0.8); /* Color de fondo */
+    margin: 20px; /* Márgenes */
+    border-radius: 20%; /* Bordes redondeados */
+  }
+  /* Acción al pasar sobre el elemento */
+  .redes-sociales img:hover {
+    background-color: #ff6b6b; /* Color del fondo */
+    border: 3px solid rgba(181, 172, 172, 0.8); /* Borde del contenedor */
+  }
+}

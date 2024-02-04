@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo orden reglas de estilo</title>
     <!-- Pone color azul a los h1 */-->
-	<link rel="stylesheet" href="estilos_con_link.css"> 
-		
-	<style>
-		/* Pone color rojo a los h1 */
-		@import url("estilos_con_import.css");  
+    <link rel="stylesheet" href="estilos_con_link.css">
 
-		/* Pone de color amarillo*/
-		h1{
-			/* Si eliminamos los comentarios de la siguiente línea de código los h1 serían azules, ya que se le da prioridad a la regla !important */
-			/*color:blue !important;*/
-			color:yellow;}
-        
+    <style>
+        /* Pone color rojo a los h1 */
+        @import url("estilos_con_import.css");
+
+        /* Pone de color amarillo*/
+        h1 {
+            /* Si eliminamos los comentarios de la siguiente línea de código los h1 serían azules, ya que se le da prioridad a la regla !important */
+            /*color:blue !important;*/
+            color: yellow;
+        }
     </style>
 </head>
-<body>
-    <h1 style="color:pink"> Elementos de bloque</h1>    
-    <div> Primer elemento  - bloque</div>   
-    <div> Segundo elemento - bloque</div>   
-    <div> Tercer elemento  - bloque</div>   
-    <div> Cuarto elemento  - bloque</div>   
 
-    <h1> Elementos de línea </h1>    
+<body>
+    <h1 style="color:pink"> Elementos de bloque</h1>
+    <div> Primer elemento - bloque</div>
+    <div> Segundo elemento - bloque</div>
+    <div> Tercer elemento - bloque</div>
+    <div> Cuarto elemento - bloque</div>
+
+    <h1> Elementos de línea </h1>
     <img src="imagen.jpg" alt="Imagen de playa">
     <img src="imagen.jpg" alt="Imagen de playa">
     <img src="imagen.jpg" alt="Imagen de playa">
     <img src="imagen.jpg" alt="Imagen de playa">
-    
-    <h1> Elementos span (son elementos en línea) </h1>    
+
+    <h1> Elementos span (son elementos en línea) </h1>
     <span> Primero</span>
     <span> Segundo</span>
     <span> Tercero</span>
@@ -40,4 +42,5 @@
 
 
 </body>
+
 </html>
