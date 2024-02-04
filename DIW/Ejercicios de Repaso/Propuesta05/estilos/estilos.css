@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Definimos colores con variables */
+:root {
+  --rosa: pink;
+  --azulClaro: aqua;
+  --grisClaro: rgb(191, 201, 202);
+  --violetaClaro: rgb(210, 180, 222);
+  --verde: rgb(88, 214, 141);
+  --naranja: orange;
+  --rojoClaro: rgb(255, 67, 67);
+}
+
+/***********/
+/* FUENTES */
+/***********/
+/* Importamos la fuente externa por url desde https://fonts.google.com/ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+
+/***********************/
+/* CUERPO DE LA PÁGINA */
+/***********************/
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 200px 100px 500px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "cabecera"
+    "navegacion"
+    "contenidos";
+}
+
+/*************************/
+/* CABECERA */
+/*************************/
+.cabecera {
+  grid-area: cabecera;
+  background-color: var(--verde);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.cabecera img {
+  width: 100px;
+}
+
+.cabecera:hover img {
+  display: none;
+}
+
+.cabecera:hover p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: blue;
+  font-size: x-large;
+}
+
+/*************************/
+/* NAVEGACIÓN */
+/*************************/
+.navegacion {
+  grid-area: navegacion;
+  background-color: var(--rosa);
+  border: solid var(--grisClaro) 1px;
+  border-radius: 10px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.navegacion:hover {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.circulo::before,
+.circulo::after {
+  content: ""; /* Necesario para que los pseudoelementos sean visibles */
+  position: absolute;
+  width: 3px; /* Ancho de las líneas que formarán la "x" */
+  height: 100%; /* Altura de las líneas que formarán la "x" */
+  background: var(--rojoClaro); /* Color de las líneas que formarán la "x" */
+  right: 50%; /* Ajusta la posición vertical al centro del círculo */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s;
+}
+
+.circulo::before {
+  transform: rotate(45deg); /* Gira la línea 45 grados */
+}
+
+.circulo::after {
+  transform: rotate(-45deg); /* Gira la línea -45 grados */
+}
+
+.circulo {
+  background: var(--naranja);
+  border-radius: 50%;
+  border: 2px var(--verde) solid;
+  width: 50px;
+  height: 50px;
+  margin: 6px;
+  position: relative; /* Asegura que los pseudoelementos estén posicionados correctamente */
+}
+
+.circulo:hover::before,
+.circulo:hover::after {
+  opacity: 1; /* Muestra las líneas al hacer hover */
+}
+
+.navegacion:has(#circulo1:hover) #circulo2 {
+  border-radius: 0;
+}
+
+.navegacion:has(#circulo2:hover) #circulo1,
+.navegacion:has(#circulo2:hover) #circulo3 {
+  border-radius: 0;
+}
+
+.navegacion:has(#circulo3:hover) #circulo2,
+.navegacion:has(#circulo3:hover) #circulo4 {
+  border-radius: 0;
+}
+
+.navegacion:has(#circulo4:hover) #circulo3 {
+  border-radius: 0;
+}
+
+/*********************/
+/* ZONA DE CONTENIDO */
+/*********************/
+.contenidos {
+  grid-area: contenidos;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 3fr 1fr 2fr 2fr;
+  grid-template-areas:
+    "zona1 zona2 zona3 zona4"
+    "zona1 zona2 zona5 zona5";
+}
+
+.zona1 {
+  grid-area: zona1;
+  background-color: var(--azulClaro);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.zona2 {
+  grid-area: zona2;
+  background-color: var(--rojoClaro);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.zona3 {
+  grid-area: zona3;
+  background-color: var(--grisClaro);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.zona4 {
+  grid-area: zona4;
+  background-color: var(--naranja);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.zona5 {
+  grid-area: zona5;
+  background-color: var(--violetaClaro);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/*---------------------------------------------------*/
+/* ESTILOS PARA PANTALLAS MÁS PEQUÑAS (MENOS DE 620PX) */
+/*---------------------------------------------------*/
+@media screen and (min-width: 700px) {
+  /* … */
+}

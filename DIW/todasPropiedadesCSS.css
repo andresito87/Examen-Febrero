@@ -1,679 +1,673 @@
 /*Width y Height al 100% para que ocupe toda la pantalla*/
 #DIW {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* max-width, max-height, min-width, min-height al 100% para que ocupe toda la pantalla */
 #DIW {
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 100%;
-    min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /*padding*/
 #DIW {
-    padding: 3px 20px 3px 20px;
+  padding: 3px 20px 3px 20px;
 }
 
 #DIW {
-    padding: 3px 20px 3px;
+  padding: 3px 20px 3px;
 }
 
 #DIW {
-    padding: 3px 20px;
+  padding: 3px 20px;
 }
 
 #DIW {
-    padding: 3px;
+  padding: 3px;
 }
 
 /*margin*/
 #DIW {
-    margin: 3px 20px 3px 20px;
+  margin: 3px 20px 3px 20px;
 }
 
 #DIW {
-    margin: 3px 20px 3px;
+  margin: 3px 20px 3px;
 }
 
 #DIW {
-    margin: 3px 20px;
+  margin: 3px 20px;
 }
 
 #DIW {
-    margin: 3px;
+  margin: 3px;
 }
 
 /*border*/
 #DIW {
-    border: 3px solid #333;
+  border: 3px solid #333;
 }
 
 #DIW {
-    /* Valores diferentes para las propiedades relacionadas con bordes */
-    width: 400px;
-    height: 200px;
-    padding: 50px;
-    border-style: solid dashed dotted double;
-    border-color: #333 red rgb(0, 0, 255) #0044AC;
-    border-width: thin medium thick 30px;
+  /* Valores diferentes para las propiedades relacionadas con bordes */
+  width: 400px;
+  height: 200px;
+  padding: 50px;
+  border-style: solid dashed dotted double;
+  border-color: #333 red rgb(0, 0, 255) #0044ac;
+  border-width: thin medium thick 30px;
 }
 
 h1 {
-    border: .5em solid blue;
+  border: 0.5em solid blue;
 }
 
 h2 {
-    border-left: solid blue .5em;
+  border-left: solid blue 0.5em;
 }
 
 h3 {
-    border-right: solid .5em;
+  border-right: solid 0.5em;
 }
 
 /*border-radius*/
 #DIW {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 #DIW {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 /*outline(perfilado)*/
 #DIW {
-    outline: 3px solid #333;
+  outline: 3px solid #333;
 }
 
 #DIW {
-    outline-color: #333;
-    outline-style: solid;
-    outline-width: 3px;
+  outline-color: #333;
+  outline-style: solid;
+  outline-width: 3px;
 }
 
 /*box-sizing*/
 * {
-    box-sizing: border-box;
-    /*box-sizing: content-box;*/
-    /*box-sizing: padding-box;*/
-    /*box-sizing: inherit;*/
+  box-sizing: border-box;
+  /*box-sizing: content-box;*/
+  /*box-sizing: padding-box;*/
+  /*box-sizing: inherit;*/
 }
 
 /*variables CSS*/
 :root {
-    --color-fondo: red;
-    --color-texto: blue;
-    --color-borde: green;
+  --color-fondo: red;
+  --color-texto: blue;
+  --color-borde: green;
 }
 
 #DIW {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    border: 1px solid var(--color-borde);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
 }
 
 /*Selectores*/
 /*de elemento*/
 a {
-    color: red;
+  color: red;
 }
 
 /*de atributo*/
 /*[atributo]*/
 a[href] {
-    color: red;
+  color: red;
 }
 
 /*[atributo="valor"]*/
-a[href="http://www.google.es"] {
-    color: red;
+a[href="http://www.google.es"]
+{
+  color: red;
 }
 
 /*[atributo~="valor"] que contenga la palabra valor*/
 a[href~="google"] {
-    color: red;
+  color: red;
 }
 
 /*[atributo|="valor"] que empiece por valor*/
 a[href|="http"] {
-    color: red;
+  color: red;
 }
 
 /*[atributo^="valor"] que empiece por valor*/
 a[href^="http"] {
-    color: red;
+  color: red;
 }
 
 /*[atributo$="valor"] que termine por valor*/
 a[href$=".es"] {
-    color: red;
+  color: red;
 }
 
 /*[atributo*="valor"] que contenga valor*/
 a[href*="google"] {
-    color: red;
+  color: red;
 }
 
 /*Contextuales*/
 /*elementos descendientes*/
 div a {
-    color: red;
+  color: red;
 }
 
 /*elementos hijos*/
 div > a {
-    color: red;
+  color: red;
 }
 
 /*elementos adyacentes*/
 div + a {
-    color: red;
+  color: red;
 }
 
 /*elementos hermanos*/
 div ~ a {
-    color: red;
+  color: red;
 }
 
 /*de Clases (<h1 class="especial">)*/
 .rojo {
-    color: red;
+  color: red;
 }
 
 /*de ID (<h1 id="especial">)*/
 #DIW {
-    color: red;
+  color: red;
 }
 
 /*Pseudo-selectores*/
 /*Para anclas el orden es: link, visited, hover, active, focus (LVHA)*/
 /*:active*/
 a:active {
-    color: red;
+  color: red;
 }
 
 /*:focus*/
 a:focus {
-    color: red;
+  color: red;
 }
 
 /*:hover*/
 a:hover {
-    color: red;
+  color: red;
 }
 
 /*:link*/
 a:link {
-    color: red;
+  color: red;
 }
 
 /*:visited*/
 a:visited {
-    color: red;
+  color: red;
 }
 
 /* en función de la posición dentro de un grupo o contenedor padre*/
 /*:first-child*/
 p:first-child {
-    color: red;
+  color: red;
 }
 
 /*:last-child*/
 p:last-child {
-    color: red;
+  color: red;
 }
 
 /*:nth-child(n)*/
 p:nth-child(2) {
-    color: red;
+  color: red;
 }
 
 /*:nth-last-child(n)*/
 p:nth-last-child(2) {
-    color: red;
+  color: red;
 }
 
 /*:nth-of-type(n)*/
 p:nth-of-type(2) {
-    color: red;
+  color: red;
 }
 
 /* Selecciona la secuencia de elementos span 1,3,4,5 empezando desde el final*/
-span:nth-last-of-type(2n+1) {
-    font-size: 0.8rem;
-    color: green;
+span:nth-last-of-type(2n + 1) {
+  font-size: 0.8rem;
+  color: green;
 }
 
 /*:only-child*/
 p:only-child {
-    color: red;
+  color: red;
 }
 
 /*:only-of-type*/
 p:only-of-type {
-    color: red;
+  color: red;
 }
 
 /*pseudo-elementos*/
 /*:focus*/
 input:focus {
-    color: red;
+  color: red;
 }
 
 /*:enabled*/
 input:enabled {
-    color: red;
+  color: red;
 }
 
 /*:disabled*/
 input:disabled {
-    color: red;
+  color: red;
 }
 
 /*:checked*/
 input:checked {
-    color: red;
+  color: red;
 }
 
 /*:not*/
 p:not(.rojo) {
-    color: red;
+  color: red;
 }
 
 /*:root*/
 :root {
-    color: red;
+  color: red;
 }
 
 /*:empty*/
 p:empty {
-    color: red;
+  color: red;
 }
 
 /*:target*/
 p:target {
-    color: red;
+  color: red;
 }
 
 /*:lang*/
 p:lang(es) {
-    color: red;
+  color: red;
 }
 
 /*combinaciones*/
 main,
-p:nth-child(3n+4) { /*4,7,10,13*/
-    color: red;
+p:nth-child(3n + 4) {
+  /*4,7,10,13*/
+  color: red;
 }
 
 /*pseudo-clases*/
 /*::after*/
 p::after {
-    content: "Texto después"; /* escribimos "Texto después" después del contenido del elemento p */
+  content: "Texto después"; /* escribimos "Texto después" después del contenido del elemento p */
 }
 
 /*::before*/
 p::before {
-    content: "Texto antes"; /* escribimos "Texto antes" antes del contenido del elemento p */
+  content: "Texto antes"; /* escribimos "Texto antes" antes del contenido del elemento p */
 }
 
 /*::first-letter*/
 p::first-letter {
-    color: red;
+  color: red;
 }
 
 /*::first-line*/
 p::first-line {
-    color: red;
+  color: red;
 }
 
 /*::marker (hace referencia a los elementos de una lista)*/
 p::marker {
-    color: red;
+  color: red;
 }
 
 /*::selection (aplica estilos al texto seleccionado con teclado o ratón)*/
 p::selection {
-    color: red;
+  color: red;
 }
 
 /*placeholder (aplica estilos al texto de sugerencia de un input)*/
 input::placeholder {
-    color: red;
+  color: red;
 }
 
-::placeholder { /* Para todos los inputs */
-    color: red;
+::placeholder {
+  /* Para todos los inputs */
+  color: red;
 }
 
 /* !important */
 p {
-    color: red !important;
+  color: red !important;
 }
 
 /*FUENTES*/
 /*font-family*/
 p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*font-size*/
 p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /*font-style*/
 p {
-    font-style: italic; /* Opciones: normal, italic, oblique */
+  font-style: italic; /* Opciones: normal, italic, oblique */
 }
 
 /*font-weight (grosor de la fuente)*/
 p {
-    font-weight: bold; /* Opciones: normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
+  font-weight: bold; /* Opciones: normal, bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900 */
 }
 
 /*font-variant (mayúsculas de pequeño tamaño)*/
 p {
-    font-variant: small-caps; /* Opciones: normal, small-caps */
+  font-variant: small-caps; /* Opciones: normal, small-caps */
 }
 
 /*font-stretch (ancho de la fuente)*/
 p {
-    font-stretch: expanded; /* Opciones: normal, condensed, expanded, extra-condensed, extra-expanded, semi-condensed, semi-expanded, ultra-condensed, ultra-expanded */
+  font-stretch: expanded; /* Opciones: normal, condensed, expanded, extra-condensed, extra-expanded, semi-condensed, semi-expanded, ultra-condensed, ultra-expanded */
 }
 
 /*font-size-adjust (ajuste del tamaño de la fuente)*/
 p {
-    font-size-adjust: 0.5; /* Opciones: none, <number> */
+  font-size-adjust: 0.5; /* Opciones: none, <number> */
 }
 
 /*@font-face (fuentes personalizadas)*/
 @font-face {
-    font-family: "mi_fuente"; /* Nombre personalizado de la fuente */
-    /*src: url("./roboto/Roboto-Light.ttf");*/
-    font-weight: 300;
-    font-style: normal;
+  font-family: "mi_fuente"; /* Nombre personalizado de la fuente */
+  /*src: url("./roboto/Roboto-Light.ttf");*/
+  font-weight: 300;
+  font-style: normal;
 }
 
 p {
-    font-family: "mi_fuente", Arial, Helvetica, sans-serif;
+  font-family: "mi_fuente", Arial, Helvetica, sans-serif;
 }
 
 /*PROPIEDADES DE TEXTO*/
 /*color*/
 p {
-    color: red;
+  color: red;
 }
 
 /*alineación*/
 /*horizontal*/
 p {
-    text-align: center; /* Opciones: left, right, center, justify */
+  text-align: center; /* Opciones: left, right, center, justify */
 }
 
 /*vertical*/
 p {
-    vertical-align: middle; /* Opciones: baseline, sub, super, top, text-top, middle, bottom, text-bottom */
+  vertical-align: middle; /* Opciones: baseline, sub, super, top, text-top, middle, bottom, text-bottom */
 }
 
 /*decoración*/
 p {
-    text-decoration: underline; /* Opciones: none, underline, overline, line-through, blink */
+  text-decoration: underline; /* Opciones: none, underline, overline, line-through, blink */
 }
 
 /*transformación*/
 p {
-    text-transform: uppercase; /* Opciones: none, capitalize, uppercase, lowercase */
+  text-transform: uppercase; /* Opciones: none, capitalize, uppercase, lowercase */
 }
 
 /*tamaño de la linea*/
 p {
-    line-height: 1.5; /* Opciones: normal, <number>, <length>, <percentage> */
+  line-height: 1.5; /* Opciones: normal, <number>, <length>, <percentage> */
 }
 
 /*sangría de la primera línea*/
 p {
-    text-indent: 2em; /* Opciones: <length>, <percentage> */
+  text-indent: 2em; /* Opciones: <length>, <percentage> */
 }
 
 /*espacio entre letras*/
 p {
-    letter-spacing: 2px; /* Opciones: normal, <length> */
+  letter-spacing: 2px; /* Opciones: normal, <length> */
 }
 
 /*espacio entre palabras*/
 p {
-    word-spacing: 2px; /* Opciones: normal, <length> */
+  word-spacing: 2px; /* Opciones: normal, <length> */
 }
 
 /*gestión de espacios en blanco*/
 p {
-    white-space: nowrap; /* Opciones: normal, nowrap, pre, pre-wrap, pre-line, break-spaces */
+  white-space: nowrap; /* Opciones: normal, nowrap, pre, pre-wrap, pre-line, break-spaces */
 }
 
 /*dirección de escritura (para idiomas que se escriben de derecha a izquierda)*/
 p {
-    direction: rtl; /* Opciones: ltr, rtl */
+  direction: rtl; /* Opciones: ltr, rtl */
 }
 
 /*control de texto cuando se desborda del contenedor*/
 p {
-    overflow: hidden; /* Opciones: visible, hidden, scroll, auto */
+  overflow: hidden; /* Opciones: visible, hidden, scroll, auto */
 }
 
 p {
-    overflow-x: hidden; /* Opciones: visible, hidden, scroll, auto */
+  overflow-x: hidden; /* Opciones: visible, hidden, scroll, auto */
 }
 
 p {
-    overflow-y: hidden; /* Opciones: visible, hidden, scroll, auto */
+  overflow-y: hidden; /* Opciones: visible, hidden, scroll, auto */
 }
 
 p {
-    text-overflow: ellipsis; /* Opciones: clip(no muestra los puntos suspensivos), ellipsis(muestra los puntos suspensivos) */
+  text-overflow: ellipsis; /* Opciones: clip(no muestra los puntos suspensivos), ellipsis(muestra los puntos suspensivos) */
 }
 
 p {
-    overflow-wrap: break-word; /* Opciones: normal, break-word(no deja que las palabras se salgan del contenedor, las corta) */
+  overflow-wrap: break-word; /* Opciones: normal, break-word(no deja que las palabras se salgan del contenedor, las corta) */
 }
 
 /*sombras*/
 p {
-    text-shadow: 2px 2px 2px #333; /* Opciones: none, <length> <length> <length> <color> */
+  text-shadow: 2px 2px 2px #333; /* Opciones: none, <length> <length> <length> <color> */
 }
 
 /*COLUMNAS*/
 /*column-count(numeros de columnas)*/
 p {
-    column-count: 3; /* Opciones: auto, <number> */
+  column-count: 3; /* Opciones: auto, <number> */
 }
 
 /*column-width (ancho de las columnas)*/
 p {
-    column-width: 200px; /* Opciones: auto, <length> */
+  column-width: 200px; /* Opciones: auto, <length> */
 }
 
 /*column-gap (separacion entre columnas)*/
 p {
-    column-gap: 20px; /* Opciones: normal, <length> */
+  column-gap: 20px; /* Opciones: normal, <length> */
 }
 
-/*column-rule*/
+/*column-rule formato de la linea divisoría entre columnas*/
 p {
-    column-rule: 1px solid #333; /* Opciones: <length> <line-style> <color> */
-    column-rule-style: solid; /* Opciones: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset */
-    column-rule-width: 1px; /* Opciones: medium, thin, thick, <length> */
+  column-rule: 1px solid #333; /* Opciones: <length> <line-style> <color> */
+  column-rule-style: solid; /* Opciones: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset */
+  column-rule-width: 1px; /* Opciones: medium, thin, thick, <length> */
 }
 
 /*column-span (para que un elemento ocupe todas las columnas o solo una)*/
 p {
-    column-span: all; /* Opciones: none, all */
+  column-span: all; /* Opciones: none, all */
 }
 
 /*column-fill*/
 p {
-    column-fill: auto; /* Ocupa el espacio disponible de forma automática */
-    column-fill: balance; /* Distribuye el contenido de forma equilibrada entre todas las columnas definidas en column-count */
+  column-fill: auto; /* Ocupa el espacio disponible de forma automática */
+  column-fill: balance; /* Distribuye el contenido de forma equilibrada entre todas las columnas definidas en column-count */
 }
 
 /*numero de columnas y ancho de las columnas*/
 p {
-    columns: 200px 3; /* Opciones: <length> <number> */
+  columns: 200px 3; /* Opciones: <length> <number> */
 }
 
 /*COLORES*/
 /*color*/
 p {
-    color: rgb(255, 0, 0); /* Opciones: <color> */
-    color: #FF0000; /* Opciones: <color> */
-    color: red; /* Opciones: <color> */
-    color: rgba(255, 0, 0, 0.5); /* Opciones: <color> */
-    color: hsl(0, 100%, 50%); /* Opciones: <color> */
-    color: hsla(0, 100%, 50%, 0.5); /* Opciones: <color> */
-    color: currentColor; /* Color del elemento padre */
-    color: inherit; /* Color del elemento padre */
+  color: rgb(255, 0, 0); /* Opciones: <color> */
+  color: #ff0000; /* Opciones: <color> */
+  color: red; /* Opciones: <color> */
+  color: rgba(255, 0, 0, 0.5); /* Opciones: <color> */
+  color: hsl(0, 100%, 50%); /* Opciones: <color> */
+  color: hsla(0, 100%, 50%, 0.5); /* Opciones: <color> */
+  color: currentColor; /* Color del elemento padre */
+  color: inherit; /* Color del elemento padre */
 }
 
 /*background-color*/
 p {
-    background-color: rgb(255, 0, 0); /* Opciones: <color> */
-    background-color: #FF0000; /* Opciones: <color> */
-    background-color: red; /* Opciones: <color> */
-    background-color: rgba(255, 0, 0, 0.5); /* Opciones: <color> */
-    background-color: hsl(0, 100%, 50%); /* Opciones: <color> */
-    background-color: hsla(0, 100%, 50%, 0.5); /* Opciones: <color> */
-    background-color: currentColor; /* Color del elemento padre */
-    background-color: inherit; /* Color del elemento padre */
+  background-color: rgb(255, 0, 0); /* Opciones: <color> */
+  background-color: #ff0000; /* Opciones: <color> */
+  background-color: red; /* Opciones: <color> */
+  background-color: rgba(255, 0, 0, 0.5); /* Opciones: <color> */
+  background-color: hsl(0, 100%, 50%); /* Opciones: <color> */
+  background-color: hsla(0, 100%, 50%, 0.5); /* Opciones: <color> */
+  background-color: currentColor; /* Color del elemento padre */
+  background-color: inherit; /* Color del elemento padre */
 }
 
 /*degradados*/
 /*lineales como fondo*/
 p {
-    background-image: linear-gradient(to right, red, yellow); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
+  background-image: linear-gradient(
+    to right,
+    red,
+    yellow
+  ); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
 }
 
 /*lineales como fondo y con repeticiones*/
 p {
-    background-image: repeating-linear-gradient(to right, red, yellow 20%, green 40%); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
+  background-image: repeating-linear-gradient(
+    to right,
+    red,
+    yellow 20%,
+    green 40%
+  ); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
 }
 
 /*radiales como fondo*/
 p {
-    background-image: radial-gradient(red, yellow); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
+  background-image: radial-gradient(
+    red,
+    yellow
+  ); /* Opciones: linear-gradient, radial-gradient, repeating-linear-gradient, repeating-radial-gradient */
 }
 
 div {
-    background: radial-gradient(circle, red, green);
+  background: radial-gradient(circle, red, green);
 }
 
 div {
-    background: radial-gradient(ellipse, red 30%, green 70%);
+  background: radial-gradient(ellipse, red 30%, green 70%);
 }
 
 /*Repetiremos 2 veces el degradado*/
 div {
-    background: repeating-radial-gradient(at 75% 20%, white, blue, black 50%);
+  background: repeating-radial-gradient(at 75% 20%, white, blue, black 50%);
 }
 
 /*IMAGEN DE FONDO*/
 /*background-image (imagen de fondo, prevalece sobre background-color)*/
 p {
-    /*background-image: url("imagen.jpg"); Opciones: none, <url> */
+  /*background-image: url("imagen.jpg"); Opciones: none, <url> */
 }
 
 /*background-origin (origen de la imagen de fondo)*/
 p {
-    background-origin: border-box; /* Opciones: padding-box, border-box, content-box */
+  background-origin: border-box; /* Opciones: padding-box, border-box, content-box */
 }
 
 /*background-size (tamaño de la imagen de fondo)*/
 p {
-    background-size: auto; /* Opciones: auto, cover, contain, <length>, <percentage> */
+  background-size: auto; /* Opciones: auto, cover, contain, <length>, <percentage> */
 }
 
 /*background-clip (recorte de la imagen de fondo)*/
 p {
-    background-clip: border-box; /* Opciones: padding-box, border-box, content-box */
+  background-clip: border-box; /* Opciones: padding-box, border-box, content-box */
 }
 
 /*background-repeat (repetición de la imagen de fondo)*/
 p {
-    background-repeat: repeat; /* Opciones: repeat, repeat-x, repeat-y, no-repeat */
+  background-repeat: repeat; /* Opciones: repeat, repeat-x, repeat-y, no-repeat */
 }
 
 /*background-position (posición de la imagen de fondo)*/
 p {
-    background-position: center; /* Opciones: top, bottom, left, right, center, <length>, <percentage> */
+  background-position: center; /* Opciones: top, bottom, left, right, center, <length>, <percentage> */
 }
 
 /*background-attachment (si la imagen de fondo se mueve con el scroll o no)*/
 p {
-    background-attachment: scroll; /* Opciones: scroll, fixed, local */
+  background-attachment: scroll; /* Opciones: scroll, fixed, local */
 }
 
 /*background (propiedad abreviada)*/
 p {
-    /*background: red url("imagen.jpg") no-repeat center center / cover border-box content-box scroll;*/
+  /*background: red url("imagen.jpg") no-repeat center center / cover border-box content-box scroll;*/
 }
 
 /*FILTROS*/
 /*filter*/
 p {
-    filter: blur(5px); /* Opciones: none, blur(), brightness(), contrast(), drop-shadow(), grayscale(), hue-rotate(), invert(), opacity(), saturate(), sepia() */
+  filter: blur(
+    5px
+  ); /* Opciones: none, blur(), brightness(), contrast(), drop-shadow(), grayscale(), hue-rotate(), invert(), opacity(), saturate(), sepia() */
 }
 
 /*filter (propiedad abreviada)*/
 p {
-    filter: blur(5px) brightness(50%) contrast(50%) drop-shadow(5px 5px 5px #333) grayscale(50%) hue-rotate(90deg) invert(50%) opacity(50%) saturate(50%) sepia(50%);
+  filter: blur(5px) brightness(50%) contrast(50%) drop-shadow(5px 5px 5px #333)
+    grayscale(50%) hue-rotate(90deg) invert(50%) opacity(50%) saturate(50%)
+    sepia(50%);
 }
 
 /*SOMBRAS*/
 /*box-shadow (sombra del elemento)*/
 p {
-    box-shadow: 20px 20px 40px 15px rgb(125, 100, 23); /* Sombra indicando posición, color, efecto blur y spead-radius*/
+  box-shadow: 20px 20px 40px 15px rgb(125, 100, 23); /* Sombra indicando posición, color, efecto blur y spead-radius*/
 }
 
 /*varias sombras*/
 p {
-    box-shadow: 20px 20px 40px 15px rgb(125, 100, 23), 20px 20px 40px 15px rgb(125, 100, 23);
+  box-shadow: 20px 20px 40px 15px rgb(125, 100, 23),
+    20px 20px 40px 15px rgb(125, 100, 23);
 }
 
 /*text-shadow (sombra del texto)*/
 p {
-    text-shadow: 10px 10px 2px rgb(255, 0, 0);
+  text-shadow: 10px 10px 2px rgb(255, 0, 0);
 }
 
 h1 {
-    text-shadow: 10px 10px 2px rgb(255, 0, 0), 20px 20px 4px rgb(255, 255, 0)
+  text-shadow: 10px 10px 2px rgb(255, 0, 0), 20px 20px 4px rgb(255, 255, 0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

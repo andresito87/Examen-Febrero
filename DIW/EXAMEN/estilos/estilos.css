@@ -44,7 +44,7 @@ body {
 /*************************/
 header {
   grid-area: cabecera;
-  background-color: var(--azulclaro);
+  background-color: var(--azulClaro);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
