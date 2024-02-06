@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Definimos colores con variables */
+:root {
+  --azulClaro: aqua;
+  --rosa: rgb(245, 122, 122);
+}
+
+/***********/
+/* FUENTES */
+/***********/
+/* Carga de fuente externa desde archivo local*/
+@font-face {
+  font-family: "miFuente"; /* nombre de la fuente */
+  src: url(../fuentes/fuente_externa.ttf); /* Ubicación del archivo */
+}
+
+/***********************/
+/* CUERPO DE LA PÁGINA */
+/***********************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  border: 1px black solid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "navegacion navegacion"
+    "zona1 zona2";
+}
+
+/*************************/
+/* NAVEGACIÓN */
+/*************************/
+nav {
+  grid-area: navegacion;
+  border: 1px black solid;
+  margin: 2px;
+}
+
+nav ul {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+
+li a:hover {
+  cursor: pointer;
+}
+
+nav ul li:last-child a {
+  font-size: x-large;
+  font-weight: bold;
+  color: var(--azulClaro);
+}
+
+/*********************/
+/* ZONA DE CONTENIDO */
+/*********************/
+main {
+  grid-area: zona1;
+  border: 1px black solid;
+  margin: 2px;
+  width: 99%;
+}
+
+main h1 {
+  font-family: miFuente, serif;
+  color: var(--azulClaro);
+  text-align: center;
+}
+
+main img {
+  width: 150px;
+  margin: 5px;
+}
+
+main h1:hover {
+  color: var(--rosa);
+}
+
+main .subZona1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main .subZona1 img {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+}
+
+main .subZona2 p {
+  padding: 10px;
+  column-count: 2;
+  column-width: 45%;
+  column-gap: 20px;
+  column-rule: 1px solid black;
+  column-rule-style: solid;
+  column-rule-width: 2px;
+}
+
+main .subZona3 p {
+  text-transform: capitalize;
+  padding: 10px;
+}
+
+/*********************/
+/* ZONA LATERAL */
+/*********************/
+aside {
+  grid-area: zona2;
+  border: 1px black solid;
+  margin: 2px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+aside input:valid {
+  border: 4px green solid;
+}
+
+aside input:invalid {
+  border: 4px red solid;
+}
+
+aside .botones {
+  margin-top: 10px;
+}
+
+aside .botones * {
+  margin: 15px;
+}
+
+/*---------------------------------------------------*/
+/* ESTILOS PARA PANTALLAS MÁS PEQUÑAS (MENOS DE 710PX) */
+/*---------------------------------------------------*/
+@media screen and (max-width: 710px) {
+  body {
+    display: grid;
+    border: 1px black solid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "navegacion"
+      "zona1"
+      "zona2";
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "subzona1"
+      "subzona2"
+      "subzona3";
+  }
+
+  main h1 {
+    grid-area: titulo;
+  }
+
+  /*Cambio el orden de las columnas, cambiando la zona que usa dentro del grid*/
+  main .subZona1 {
+    grid-area: subzona2;
+  }
+
+  main .subZona2 {
+    grid-area: subzona1;
+  }
+
+  main .subZona3 {
+    grid-area: subzona3;
+    display: none;
+  }
+}

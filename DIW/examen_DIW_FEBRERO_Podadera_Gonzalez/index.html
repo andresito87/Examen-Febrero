@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilos.css" media="screen">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Examen DIW Febrero</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank" accesskey="c">Compras</a>
+            </li>
+            <li>
+                <a href="https://www.w3big.com/es/html/default.html#gsc.tab=0" target="_blank" accesskey="v">Ventas</a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/css/" target="_blank" accesskey="p">Promociones</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>IES Portada Alta</h1>
+        <div class="subZona1">
+            <img src="./imagenes/figura.jpg" alt="Imagen de un dispositivo móvil" tabindex="1">
+            <img src="./imagenes/figura.jpg" alt="Imagen de un dispositivo móvil" tabindex="2">
+        </div>
+        <div class="subZona2">
+            <p tabindex="3">Los teléfonos móviles han transformado nuestra vida diaria, facilitando la comunicación
+                instantánea y el
+                acceso a
+                información en cualquier momento. Sin embargo, su uso excesivo también plantea desafíos en términos de
+                distracción y
+                dependencia tecnológica. En la actualidad, equilibrar la conveniencia y la conciencia de su impacto se
+                ha vuelto
+                crucial.</p>
+        </div>
+        <div class="subZona3">
+            <p lang="en" tabindex="4">Mobile phones have transformed our daily lives, enabling instant communication and
+                access to
+                information
+                at any time.
+                However, their excessive use also poses challenges in terms of distraction and technological dependency.
+                Striking a
+                balance between convenience and awareness of their impact has become crucial in today's world.</p>
+        </div>
+    </main>
+    <aside>
+        <h1>Formulario</h1>
+        <form action="" autocomplete="on" validate>
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <label for="nombre" title="Nombre de la persona">
+                    <input id="nombre" name="nombre" maxlength="30" placeholder="Nombre"
+                        title="Introduzca su nombre (max. 30 caracteres)" tabindex="1" required>
+                </label>
+                <br>
+                <br>
+                <label for="fecha" title="Fecha en la que se realiza la consulta">
+                    <input class="tipo_2" type="date" id="correo" name="fecha" placeholder="dd/mm/aaaa"
+                        title="Introduzca la fecha en que realiza la consulta" tabindex="2">
+                </label>
+                <br>
+                <br>
+                <label for="textoConsulta">
+                    <textarea rows="5" cols="20" id="texto" name="textarea"
+                        placeholder="¿Cuál es el motivo de la consulta?"
+                        title="Introduzca la fecha en que realiza la consulta" tabindex="2"></textarea>
+                </label>
+
+                <br>
+                <br>
+            </fieldset>
+            <div class="botones">
+                <button class="botonEnviar" type="submit">Enviar</button>
+                <button class="botonCancelar" type="reset">Cancelar</button>
+            </div>
+
+    </aside>
+
+</body>
+
+</html>
